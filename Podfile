@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '14.0'
+# platform :ios, '13.5'
 
 target 'EngineerApp' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -12,6 +12,7 @@ target 'EngineerApp' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
- 
+  pod 'SVProgressHUD','2.2.5'
+  pod 'Charts', '~> 3.0'
 
 end
