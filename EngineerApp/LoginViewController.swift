@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var handleLoginButton: SimpleButton!
     @IBOutlet weak var handleCreateAccountButton: SimpleButton!
     
-    
     @IBAction func handleLLoginButton(_ sender: Any) {
         if let address = mailAddressTextField.text, let password = passwordTextField.text {
             

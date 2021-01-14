@@ -21,6 +21,7 @@
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
 		A441ECF125666F8A00D28158 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECF025666F8A00D28158 /* SettingViewController.swift */; };
 		A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4455025256F3C0800B41A09 /* SimpleButton.swift */; };
+		A4CBA57E25A134C200024842 /* TotalMinuteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBA57D25A134C200024842 /* TotalMinuteData.swift */; };
 		A4CD118F25806BC700067320 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4CD116C2580693900067320 /* GoogleService-Info.plist */; };
 		A4CD119D25807F4E00067320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8A9B25663E390088A1D6 /* Main.storyboard */; };
 		A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */; };
@@ -70,6 +71,7 @@
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A441ECF025666F8A00D28158 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A4455025256F3C0800B41A09 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		A4CBA57D25A134C200024842 /* TotalMinuteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMinuteData.swift; sourceTree = "<group>"; };
 		A4CD116C2580693900067320 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
@@ -139,15 +141,16 @@
 				A40F26F2257A842900E1A060 /* Const.swift */,
 				A40C8A9725663E390088A1D6 /* SceneDelegate.swift */,
 				A441ECE125666ED100D28158 /* LoginViewController.swift */,
-				A4455025256F3C0800B41A09 /* SimpleButton.swift */,
 				A441ECE625666EF100D28158 /* HomeViewController.swift */,
 				A441ECEB25666F7400D28158 /* PostViewController.swift */,
 				A40EF1E8257E0DE20024A7C5 /* ReportData.swift */,
+				A4455025256F3C0800B41A09 /* SimpleButton.swift */,
+				A4CBA57D25A134C200024842 /* TotalMinuteData.swift */,
 				A4CD116C2580693900067320 /* GoogleService-Info.plist */,
 				A441ECF025666F8A00D28158 /* SettingViewController.swift */,
+				A430D9A02575DE3F00B4A987 /* ReportViewController.swift */,
 				A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */,
 				A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */,
-				A430D9A02575DE3F00B4A987 /* ReportViewController.swift */,
 				A40C8A9B25663E390088A1D6 /* Main.storyboard */,
 				A426AA4125676BDD00A40A53 /* TabBarController.swift */,
 				A40C8A9E25663E3A0088A1D6 /* Assets.xcassets */,
@@ -367,6 +370,7 @@
 				A441ECF125666F8A00D28158 /* SettingViewController.swift in Sources */,
 				A40C8A9825663E390088A1D6 /* SceneDelegate.swift in Sources */,
 				A40EF1E9257E0DE20024A7C5 /* ReportData.swift in Sources */,
+				A4CBA57E25A134C200024842 /* TotalMinuteData.swift in Sources */,
 				A40F26F3257A842900E1A060 /* Const.swift in Sources */,
 				A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */,
 			);

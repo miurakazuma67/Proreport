@@ -113,14 +113,82 @@
                     <view key="view" contentMode="scaleToFill" id="dy9-n7-gJQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計勉強時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mre-13-irS">
+                                <rect key="frame" x="80" y="64" width="254" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FI0-k9-Xsd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-Ox-RVx">
+                                <rect key="frame" x="70" y="134" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bzO-BN-3e2"/>
+                                    <constraint firstAttribute="width" constant="50" id="cM4-gh-HqB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKB-fU-1sc">
+                                <rect key="frame" x="130" y="134" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VXE-OE-OR0"/>
+                                    <constraint firstAttribute="width" constant="60" id="e6K-d1-yn7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjU-5j-91M">
+                                <rect key="frame" x="200" y="134" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NLd-Kr-Epj"/>
+                                    <constraint firstAttribute="height" constant="40" id="cTD-tJ-x5r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rin-1e-Lcp">
+                                <rect key="frame" x="260" y="134" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8dW-j5-x3a"/>
+                                    <constraint firstAttribute="height" constant="40" id="lZz-34-UID"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tuG-HR-Nh5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rin-1e-Lcp" firstAttribute="leading" secondItem="rjU-5j-91M" secondAttribute="trailing" constant="10" id="76v-YF-NWM"/>
+                            <constraint firstItem="Gin-Ox-RVx" firstAttribute="top" secondItem="mre-13-irS" secondAttribute="bottom" constant="20" id="BXd-Iy-zsj"/>
+                            <constraint firstItem="yKB-fU-1sc" firstAttribute="leading" secondItem="Gin-Ox-RVx" secondAttribute="trailing" constant="10" id="Dvg-x7-WGH"/>
+                            <constraint firstItem="tuG-HR-Nh5" firstAttribute="trailing" secondItem="mre-13-irS" secondAttribute="trailing" constant="80" id="EZA-ZK-dZk"/>
+                            <constraint firstItem="mre-13-irS" firstAttribute="leading" secondItem="tuG-HR-Nh5" secondAttribute="leading" constant="80" id="M3O-JC-Keh"/>
+                            <constraint firstItem="rjU-5j-91M" firstAttribute="leading" secondItem="yKB-fU-1sc" secondAttribute="trailing" constant="10" id="Y9B-lD-PIs"/>
+                            <constraint firstItem="rin-1e-Lcp" firstAttribute="top" secondItem="mre-13-irS" secondAttribute="bottom" constant="20" id="bKh-6i-c8m"/>
+                            <constraint firstItem="yKB-fU-1sc" firstAttribute="top" secondItem="mre-13-irS" secondAttribute="bottom" constant="20" id="hg6-uS-6lQ"/>
+                            <constraint firstItem="rjU-5j-91M" firstAttribute="top" secondItem="mre-13-irS" secondAttribute="bottom" constant="20" id="qqj-Mn-iKz"/>
+                            <constraint firstItem="Gin-Ox-RVx" firstAttribute="leading" secondItem="tuG-HR-Nh5" secondAttribute="leading" constant="70" id="sVa-nB-YoD"/>
+                            <constraint firstItem="mre-13-irS" firstAttribute="top" secondItem="tuG-HR-Nh5" secondAttribute="top" constant="20" id="zWp-H3-mHK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="レポート" image="chart.bar" catalog="system" id="cJ6-UY-ke1"/>
+                    <connections>
+                        <outlet property="totalHourLabel" destination="Gin-Ox-RVx" id="R0b-ET-PDn"/>
+                        <outlet property="totalMinuteLabel" destination="rjU-5j-91M" id="xPe-R1-rWr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDK-UP-J88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2114" y="804"/>
+            <point key="canvasLocation" x="2111.594202898551" y="803.57142857142856"/>
         </scene>
         <!--投稿-->
         <scene sceneID="Fyg-u1-TsU">

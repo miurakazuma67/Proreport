@@ -12,7 +12,6 @@ import SVProgressHUD
 
 class SettingViewController: UIViewController
 {
-    
     @IBOutlet weak var displayNameTextField: UITextField!
     
     @IBOutlet weak var handleChangeButton: UIButton!
@@ -69,6 +68,7 @@ class SettingViewController: UIViewController
         if let user = user {
             displayNameTextField.text = user.displayName
         }
+        //ボタンのカラーを変更
         handleChangeButton.backgroundColor = UIColor.cyan
         handleLogoutButton.backgroundColor = UIColor.cyan
     }

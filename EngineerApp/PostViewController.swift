@@ -37,15 +37,14 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     fileprivate let placeholder: String = "メモ"
     //プレイスホルダー
     
-    
-    
     @IBOutlet weak var postButton: UIButton!
     
     @IBAction func postButton(_ sender: Any) {
         
-        
+        //投稿データの保存場所を定義する
         let reportRef = Firestore.firestore().collection(Const.ReportPath).document()
-        
+        //合計時間の保存場所を定義する
+        let totalMinuteRef = Firestore.firestore().collection(Const.TotalMinutePath).document()
         // HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
         // FireStoreに投稿データを保存する
@@ -53,17 +52,21 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let reportDic = [
             "name": name!,
             "caption": self.textView.text!,
-            "language": self.languageTextField.text,
-            "hour": hourTextField.text,
-            "minute": minuteTextField.text,
+            "language": self.languageTextField.text!,
+            "hour": hourTextField.text!,
+            "minute": minuteTextField.text!,
             "date": FieldValue.serverTimestamp(),
         ] as [String : Any]
         reportRef.setData(reportDic)
+        //Firestoreに合計時間を保存する
+        let totalMinuteDic = [
+            "totalMinute": Int(hourTextField.text!)! * 60 + Int(minuteTextField.text!)!
+        ] as [String : Int]
+        totalMinuteRef.setData(totalMinuteDic)
         // HUDで投稿完了を表示する
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         // 投稿処理が完了したので先頭画面に戻る
         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
-        
     }
     
     @IBOutlet weak var cancelButton: UIButton!
@@ -71,10 +74,7 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func cancelButton(_ sender: Any) {
         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -101,7 +101,6 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // インプットビュー設定
         languageTextField.inputView = pickerView
         languageTextField.inputAccessoryView = toolbar
-        
         
         self.textView.delegate = self
         //タップでキーボードを下げる
@@ -154,7 +153,6 @@ extension PostViewController {
 }
 //ここまでlanguageTextFieldの処理
 extension PostViewController {
-    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let existingLines = textView.text.components(separatedBy: .newlines)//既に存在する改行数
         let newLines = text.components(separatedBy: .newlines)//新規改行数
@@ -169,16 +167,15 @@ extension PostViewController {
         }
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == placeholder {
+        if textView.text == "メモ" {
             textView.text = nil
-            textView.textColor = .darkText
+            textView.textColor = .darkGray
         }
     }
-    
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.textColor = .darkGray
-            textView.text = placeholder
+            textView.text = "メモ"
         }
     }
 }
