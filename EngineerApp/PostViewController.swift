@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import RealmSwift
 import SVProgressHUD
 
 
@@ -14,79 +14,127 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 {
     
     @IBOutlet weak var label: UILabel!
-    
-    
+    var reportData: ReportData!
     @IBOutlet weak var languageTextField: UITextField!
-    
     var pickerView: UIPickerView = UIPickerView()
-    
     // ピッカーに表示させるデータ
-    var data: [String] = ["HTML&CSS", "PHP", "JavaScript", "Java", "Swift", "Ruby", "C", "C#", "Unity", "Python", "Laravel", "SQL", "VBA", "VB.net", "COBOL", "GO", "Perl", "TypeScript", "Kothin", "Scala", "Flutter", "その他"]
-    
+    var data: [String] = ["HTML&CSS", "PHP", "JavaScript", "Java", "Swift", "Ruby", "C", "C#", "Unity", "Python", "Laravel", "SQL", "VBA", "VB.net", "React", "COBOL", "GO", "Perl", "TypeScript", "Kothin", "Scala", "Flutter", "その他"]
     
     @IBOutlet weak var hourTextField: UITextField!
-    
     @IBOutlet weak var minuteTextField: UITextField!
-    
-    
-    
-    
     @IBOutlet weak var wordCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     fileprivate var maxWordCount: Int = 140 //最大文字数
     fileprivate let placeholder: String = "メモ"
     //プレイスホルダー
-    
     @IBOutlet weak var postButton: UIButton!
+    
+    //varidate()メソッドのため、IBAction接続をする
+    @IBAction func languageEditChanged(_ sender: UITextField) {
+        self.validate()
+    }
+    @IBAction func hourEditChanged(_ sender: UITextField) {
+        self.validate()
+    }
+    @IBAction func minuteEditChanged(_ sender: UITextField) {
+        self.validate()
+    }
     
     @IBAction func postButton(_ sender: Any) {
         
-        //投稿データの保存場所を定義する
-        let reportRef = Firestore.firestore().collection(Const.ReportPath).document()
-        //合計時間の保存場所を定義する
-        let totalMinuteRef = Firestore.firestore().collection(Const.TotalMinutePath).document()
         // HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
-        // FireStoreに投稿データを保存する
-        let name = Auth.auth().currentUser?.displayName
-        let reportDic = [
-            "name": name!,
-            "caption": self.textView.text!,
-            "language": self.languageTextField.text!,
-            "hour": hourTextField.text!,
-            "minute": minuteTextField.text!,
-            "date": FieldValue.serverTimestamp(),
-        ] as [String : Any]
-        reportRef.setData(reportDic)
-        //Firestoreに合計時間を保存する
-        let totalMinuteDic = [
-            "totalMinute": Int(hourTextField.text!)! * 60 + Int(minuteTextField.text!)!
-        ] as [String : Int]
-        totalMinuteRef.setData(totalMinuteDic)
+        // Realmに投稿データを保存する
+        let reportData = ReportData()
+        reportData.id = 0
+        reportData.caption = self.textView.text!
+        reportData.language = self.languageTextField.text!
+        reportData.hour = hourTextField.text!
+        reportData.minute = minuteTextField.text!
+        reportData.date = Date()
+        
+        let realm = try! Realm()
+        try! realm.write {
+            //idの重複を防ぐ
+            let allReportDatas = realm.objects(ReportData.self)
+            if allReportDatas.count != 0 {
+                reportData.id = allReportDatas.max(ofProperty: "id")! + 1
+            }
+            realm.add(reportData)
+        }
         // HUDで投稿完了を表示する
-        SVProgressHUD.showSuccess(withStatus: "投稿しました")
-        // 投稿処理が完了したので先頭画面に戻る
-        UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+        SVProgressHUD.showSuccess(withStatus: "記録が完了しました!")
+        // 投稿処理が完了したので、HomeViewControllerに遷移させる
+        self.tabBarController?.selectedIndex = 0;
+        
+        //各textFieldの文字を空の文字列にする
+        textView.text = ""
+        languageTextField.text = ""
+        hourTextField.text = ""
+        minuteTextField.text = ""
+        //validate呼び出し
+        self.validate()
+        //文字数カウントをリセット
+        self.wordCountLabel.text = "140"
     }
     
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBAction func cancelButton(_ sender: Any) {
-        UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+        // ① UIAlertControllerクラスのインスタンスを生成
+        // タイトル, メッセージ, Alertのスタイルを指定する
+        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
+        let alert: UIAlertController = UIAlertController(title: "記録をキャンセルしますか？", message: "", preferredStyle:  UIAlertController.Style.alert)
+        
+        // ② Actionの設定
+        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
+        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
+        // OKボタン
+        let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+            //すべてのtextField,textViewの文字列を空にする
+            self.textView.text = ""
+            self.languageTextField.text = ""
+            self.hourTextField.text = ""
+            self.minuteTextField.text = ""
+            self.validate()
+            self.dismissKeyboard()
+        })
+        // キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("Cancel")
+        })
+        // ③ UIAlertControllerにActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        // ④ Alertを表示
+        present(alert, animated: true, completion: nil)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        //validateの呼び出し
+        self.validate()
+        //label,textViewのtextColor指定
+        languageTextField.textColor = UIColor(named:"textColor")
+        hourTextField.textColor = UIColor(named:"textColor")
+        minuteTextField.textColor = UIColor(named:"textColor")
         // 枠のカラー
         textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        
         // 枠の幅
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 5
+        //背景色指定
+        languageTextField.backgroundColor = UIColor(named: "textFieldColor")
+        hourTextField.backgroundColor = UIColor(named: "textFieldColor")
+        minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
+        textView.backgroundColor = UIColor(named: "textFieldColor")
         
-        //ここから
         // ピッカー設定
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -114,9 +162,9 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         if textView.text.isEmpty {
             textView.text = placeholder
         }
-        
+        wordCountLabel.textColor = UIColor.gray
         postButton.backgroundColor = UIColor.cyan
-        cancelButton.backgroundColor = UIColor.cyan
+        cancelButton.backgroundColor = UIColor.darkGray
     }
     // 決定ボタン押下
     @objc func done() {
@@ -126,8 +174,33 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }
+    private func validate() {
+        //postButtonの有効/無効を切り替える
+        if languageTextField.text == "" {
+            postButton.isEnabled  = false //ボタン無効
+            postButton.alpha = 0.5
+        } else {
+            postButton.isEnabled  = true //ボタン有効
+            postButton.alpha = 1.0
+        }
+        
+        if hourTextField.text == "" {
+            postButton.isEnabled  = false //ボタン無効
+            postButton.alpha = 0.5
+        } else {
+            postButton.isEnabled  = true //ボタン有効
+            postButton.alpha = 1.0
+        }
+        
+        if minuteTextField.text == "" {
+            postButton.isEnabled  = false //ボタン無効
+            postButton.alpha = 0.5
+        } else {
+            postButton.isEnabled  = true //ボタン有効
+            postButton.alpha = 1.0
+        }
+    }
 }
-
 extension PostViewController {
     
     // ドラムロールの列数
@@ -169,7 +242,7 @@ extension PostViewController {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "メモ" {
             textView.text = nil
-            textView.textColor = .darkGray
+            textView.textColor = UIColor(named:"textColor")
         }
     }
     func textViewDidEndEditing(_ textView: UITextView) {
