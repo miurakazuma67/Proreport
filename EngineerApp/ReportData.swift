@@ -18,6 +18,5 @@ class ReportData: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-    
 }
 

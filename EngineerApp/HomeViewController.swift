@@ -13,23 +13,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let postTableViewCell = PostTableViewCell.self
     
     @IBOutlet weak var tableView: UITableView!
-    
-    // Realmインスタンスを取得する
     let realm = try! Realm()
-    
-    // DB内のタスクが格納されるリスト。
-    // 日付の近い順でソート：昇順
-    // 以降内容をアップデートするとリスト内は自動的に更新される。
     var reportArray = try! Realm().objects(ReportData.self).sorted(byKeyPath: "date", ascending: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
-        // カスタムセルを登録する
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
+        navigationItem.title = "学習記録"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

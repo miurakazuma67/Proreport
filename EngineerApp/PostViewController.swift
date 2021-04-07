@@ -81,15 +81,9 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBAction func cancelButton(_ sender: Any) {
-        // ① UIAlertControllerクラスのインスタンスを生成
-        // タイトル, メッセージ, Alertのスタイルを指定する
-        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
+
         let alert: UIAlertController = UIAlertController(title: "記録をキャンセルしますか？", message: "", preferredStyle:  UIAlertController.Style.alert)
-        
-        // ② Actionの設定
-        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
-        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
-        // OKボタン
+
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
@@ -117,8 +111,7 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //validateの呼び出し
+        navigationItem.title = "学習内容を記録しよう！"
         self.validate()
         //label,textViewのtextColor指定
         languageTextField.textColor = UIColor(named:"textColor")
@@ -217,12 +210,6 @@ extension PostViewController {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[row]
     }
-    /*
-     // ドラムロール選択時
-     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-     self.textField.text = list[row]
-     }
-     */
 }
 //ここまでlanguageTextFieldの処理
 extension PostViewController {
