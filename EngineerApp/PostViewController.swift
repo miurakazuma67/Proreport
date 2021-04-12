@@ -96,16 +96,13 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             self.validate()
             self.dismissKeyboard()
         })
-        // キャンセルボタン
+
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("Cancel")
         })
-        // ③ UIAlertControllerにActionを追加
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
-        // ④ Alertを表示
         present(alert, animated: true, completion: nil)
     }
     
@@ -113,16 +110,12 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         super.viewDidLoad()
         navigationItem.title = "学習内容を記録しよう！"
         self.validate()
-        //label,textViewのtextColor指定
         languageTextField.textColor = UIColor(named:"textColor")
         hourTextField.textColor = UIColor(named:"textColor")
         minuteTextField.textColor = UIColor(named:"textColor")
-        // 枠のカラー
         textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        // 枠の幅
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 5
-        //背景色指定
         languageTextField.backgroundColor = UIColor(named: "textFieldColor")
         hourTextField.backgroundColor = UIColor(named: "textFieldColor")
         minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
@@ -170,29 +163,33 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     private func validate() {
         //postButtonの有効/無効を切り替える
         if languageTextField.text == "" {
-            postButton.isEnabled  = false //ボタン無効
-            postButton.alpha = 0.5
+            buttonCannotUse()
         } else {
-            postButton.isEnabled  = true //ボタン有効
-            postButton.alpha = 1.0
+            buttonCanUse()
         }
         
         if hourTextField.text == "" {
-            postButton.isEnabled  = false //ボタン無効
-            postButton.alpha = 0.5
+            buttonCannotUse()
         } else {
-            postButton.isEnabled  = true //ボタン有効
-            postButton.alpha = 1.0
+            buttonCanUse()
         }
         
         if minuteTextField.text == "" {
-            postButton.isEnabled  = false //ボタン無効
-            postButton.alpha = 0.5
+            buttonCannotUse()
         } else {
-            postButton.isEnabled  = true //ボタン有効
-            postButton.alpha = 1.0
+            buttonCanUse()
         }
     }
+    
+    func buttonCanUse() {
+        postButton.isEnabled  = true //ボタン有効
+        postButton.alpha = 1.0
+    }
+    func buttonCannotUse() {
+        postButton.isEnabled  = false //ボタン無効
+        postButton.alpha = 0.5
+    }
+    
 }
 extension PostViewController {
     
