@@ -10,8 +10,6 @@ import RealmSwift
 
 class ReportViewController: UIViewController {
     
-    @IBOutlet weak var totalStudyLabel: UILabel!
-    @IBOutlet weak var studyLabel: UILabel!
     @IBOutlet weak var totalHourLabel: UILabel!
     @IBOutlet weak var totalMinuteLabel: UILabel!
     
@@ -46,10 +44,7 @@ class ReportViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ラベルの文字色、背景色を変更
-        studyLabel.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        studyLabel.textColor = UIColor.black
-        totalStudyLabel.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        navigationItem.title = "合計勉強時間"
     }
 }
 

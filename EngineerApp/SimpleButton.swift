@@ -23,9 +23,9 @@ class SimpleButton: UIButton {
     }
     
     func myInit() {
-            // 角を丸くする
-        self.layer.cornerRadius = 5
-        self.clipsToBounds = true
+        // 角を丸くする
+        self.layer.cornerRadius = 40 / 2
+        self.layer.cornerCurve = .continuous
         // ボタンを押している時にボタンの色を暗くするためのView
         selectView = UIView(frame: self.bounds)
         selectView.backgroundColor = UIColor.black

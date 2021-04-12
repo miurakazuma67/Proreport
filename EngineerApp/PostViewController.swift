@@ -81,15 +81,9 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBAction func cancelButton(_ sender: Any) {
-        // ① UIAlertControllerクラスのインスタンスを生成
-        // タイトル, メッセージ, Alertのスタイルを指定する
-        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
+
         let alert: UIAlertController = UIAlertController(title: "記録をキャンセルしますか？", message: "", preferredStyle:  UIAlertController.Style.alert)
-        
-        // ② Actionの設定
-        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
-        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
-        // OKボタン
+
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
@@ -102,34 +96,26 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             self.validate()
             self.dismissKeyboard()
         })
-        // キャンセルボタン
+
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("Cancel")
         })
-        // ③ UIAlertControllerにActionを追加
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
-        // ④ Alertを表示
         present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //validateの呼び出し
+        navigationItem.title = "学習内容を記録しよう！"
         self.validate()
-        //label,textViewのtextColor指定
         languageTextField.textColor = UIColor(named:"textColor")
         hourTextField.textColor = UIColor(named:"textColor")
         minuteTextField.textColor = UIColor(named:"textColor")
-        // 枠のカラー
         textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        // 枠の幅
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 5
-        //背景色指定
         languageTextField.backgroundColor = UIColor(named: "textFieldColor")
         hourTextField.backgroundColor = UIColor(named: "textFieldColor")
         minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
@@ -177,29 +163,33 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     private func validate() {
         //postButtonの有効/無効を切り替える
         if languageTextField.text == "" {
-            postButton.isEnabled  = false //ボタン無効
-            postButton.alpha = 0.5
+            buttonCannotUse()
         } else {
-            postButton.isEnabled  = true //ボタン有効
-            postButton.alpha = 1.0
+            buttonCanUse()
         }
         
         if hourTextField.text == "" {
-            postButton.isEnabled  = false //ボタン無効
-            postButton.alpha = 0.5
+            buttonCannotUse()
         } else {
-            postButton.isEnabled  = true //ボタン有効
-            postButton.alpha = 1.0
+            buttonCanUse()
         }
         
         if minuteTextField.text == "" {
-            postButton.isEnabled  = false //ボタン無効
-            postButton.alpha = 0.5
+            buttonCannotUse()
         } else {
-            postButton.isEnabled  = true //ボタン有効
-            postButton.alpha = 1.0
+            buttonCanUse()
         }
     }
+    
+    func buttonCanUse() {
+        postButton.isEnabled  = true //ボタン有効
+        postButton.alpha = 1.0
+    }
+    func buttonCannotUse() {
+        postButton.isEnabled  = false //ボタン無効
+        postButton.alpha = 0.5
+    }
+    
 }
 extension PostViewController {
     
@@ -217,12 +207,6 @@ extension PostViewController {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[row]
     }
-    /*
-     // ドラムロール選択時
-     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-     self.textField.text = list[row]
-     }
-     */
 }
 //ここまでlanguageTextFieldの処理
 extension PostViewController {

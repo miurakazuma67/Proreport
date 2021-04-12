@@ -11,25 +11,18 @@ import RealmSwift
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate
 {
     let postTableViewCell = PostTableViewCell.self
-    
     @IBOutlet weak var tableView: UITableView!
-    
-    // Realmインスタンスを取得する
     let realm = try! Realm()
-    
-    // DB内のタスクが格納されるリスト。
-    // 日付の近い順でソート：昇順
-    // 以降内容をアップデートするとリスト内は自動的に更新される。
     var reportArray = try! Realm().objects(ReportData.self).sorted(byKeyPath: "date", ascending: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
-        // カスタムセルを登録する
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
+        navigationItem.title = "学習記録"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +34,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reportArray.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // セルを取得してデータを設定する
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         //cellのdelegateにselfを渡す
         cell.deletedelegate = self
@@ -53,17 +46,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 
-//cellのデリゲートメソッドで削除処理を実装
 extension HomeViewController {
     func deleteButtonTapped(index: IndexPath){
-        // セル内のボタンがタップされた時に呼ばれるメソッド
-        //アラートを表示する↓＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
         let alert: UIAlertController = UIAlertController(title: "注意", message: "削除してもいいですか？", preferredStyle: .actionSheet)
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel) { (UIAlertAction) in
             print("キャンセル")
         }
         let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
-            // 削除」が押された時の処理をここに記述
             // データベースから削除する
             try! self.realm.write {
                 self.realm.delete(self.reportArray[index.row])
