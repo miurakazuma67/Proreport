@@ -38,8 +38,6 @@ class PostTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
         dateLabel.textColor = UIColor.gray
-        languageLabel.backgroundColor = UIColor.blue
-        languageLabel.textColor = UIColor.white
     }
     
     // ReportDataの内容をセルに表示

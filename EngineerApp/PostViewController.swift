@@ -9,9 +9,7 @@ import UIKit
 import RealmSwift
 import SVProgressHUD
 
-
-class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate
-{
+class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
     @IBOutlet weak var label: UILabel!
     var reportData: ReportData!
@@ -41,8 +39,6 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     @IBAction func postButton(_ sender: Any) {
-        
-        // HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
         // Realmに投稿データを保存する
         let reportData = ReportData()
