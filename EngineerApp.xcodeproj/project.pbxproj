@@ -13,17 +13,16 @@
 		A40C8AAD25663E3A0088A1D6 /* EngineerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C8AAC25663E3A0088A1D6 /* EngineerAppTests.swift */; };
 		A40C8AB825663E3A0088A1D6 /* EngineerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C8AB725663E3A0088A1D6 /* EngineerAppUITests.swift */; };
 		A40EF1E9257E0DE20024A7C5 /* ReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EF1E8257E0DE20024A7C5 /* ReportData.swift */; };
-		A40F26F3257A842900E1A060 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F26F2257A842900E1A060 /* Const.swift */; };
 		A426AA4225676BDD00A40A53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426AA4125676BDD00A40A53 /* TabBarController.swift */; };
 		A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D9A02575DE3F00B4A987 /* ReportViewController.swift */; };
-		A441ECE225666ED100D28158 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECE125666ED100D28158 /* LoginViewController.swift */; };
 		A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECE625666EF100D28158 /* HomeViewController.swift */; };
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
-		A441ECF125666F8A00D28158 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECF025666F8A00D28158 /* SettingViewController.swift */; };
 		A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4455025256F3C0800B41A09 /* SimpleButton.swift */; };
-		A4CBA57E25A134C200024842 /* TotalMinuteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBA57D25A134C200024842 /* TotalMinuteData.swift */; };
+		A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */; };
+		A4AADAEF25D660F000860F4A /* アプリアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = A4AADAEE25D660F000860F4A /* アプリアイコン.png */; };
 		A4CD118F25806BC700067320 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4CD116C2580693900067320 /* GoogleService-Info.plist */; };
 		A4CD119D25807F4E00067320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8A9B25663E390088A1D6 /* Main.storyboard */; };
+		A4D8D5A625B41CD30034BA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C8A9E25663E3A0088A1D6 /* Assets.xcassets */; };
 		A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */; };
 		A4FC9A892580A886005CAE32 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -63,15 +62,13 @@
 		A40C8AB725663E3A0088A1D6 /* EngineerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerAppUITests.swift; sourceTree = "<group>"; };
 		A40C8AB925663E3A0088A1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A40EF1E8257E0DE20024A7C5 /* ReportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportData.swift; sourceTree = "<group>"; };
-		A40F26F2257A842900E1A060 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A41F87DF25C96886003D3D54 /* EngineerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EngineerApp.entitlements; sourceTree = "<group>"; };
 		A426AA4125676BDD00A40A53 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A430D9A02575DE3F00B4A987 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
-		A441ECE125666ED100D28158 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A441ECE625666EF100D28158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		A441ECF025666F8A00D28158 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A4455025256F3C0800B41A09 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
-		A4CBA57D25A134C200024842 /* TotalMinuteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMinuteData.swift; sourceTree = "<group>"; };
+		A4AADAEE25D660F000860F4A /* アプリアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アプリアイコン.png"; sourceTree = "<group>"; };
 		A4CD116C2580693900067320 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
@@ -137,21 +134,19 @@
 		A40C8A9425663E390088A1D6 /* EngineerApp */ = {
 			isa = PBXGroup;
 			children = (
+				A41F87DF25C96886003D3D54 /* EngineerApp.entitlements */,
 				A40C8A9525663E390088A1D6 /* AppDelegate.swift */,
-				A40F26F2257A842900E1A060 /* Const.swift */,
 				A40C8A9725663E390088A1D6 /* SceneDelegate.swift */,
-				A441ECE125666ED100D28158 /* LoginViewController.swift */,
 				A441ECE625666EF100D28158 /* HomeViewController.swift */,
 				A441ECEB25666F7400D28158 /* PostViewController.swift */,
 				A40EF1E8257E0DE20024A7C5 /* ReportData.swift */,
 				A4455025256F3C0800B41A09 /* SimpleButton.swift */,
-				A4CBA57D25A134C200024842 /* TotalMinuteData.swift */,
 				A4CD116C2580693900067320 /* GoogleService-Info.plist */,
-				A441ECF025666F8A00D28158 /* SettingViewController.swift */,
 				A430D9A02575DE3F00B4A987 /* ReportViewController.swift */,
 				A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */,
 				A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */,
 				A40C8A9B25663E390088A1D6 /* Main.storyboard */,
+				A4AADAEE25D660F000860F4A /* アプリアイコン.png */,
 				A426AA4125676BDD00A40A53 /* TabBarController.swift */,
 				A40C8A9E25663E3A0088A1D6 /* Assets.xcassets */,
 				A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */,
@@ -307,6 +302,9 @@
 			files = (
 				A4FC9A892580A886005CAE32 /* PostTableViewCell.xib in Resources */,
 				A4CD118F25806BC700067320 /* GoogleService-Info.plist in Resources */,
+				A4D8D5A625B41CD30034BA53 /* Assets.xcassets in Resources */,
+				A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */,
+				A4AADAEF25D660F000860F4A /* アプリアイコン.png in Resources */,
 				A4CD119D25807F4E00067320 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,16 +360,12 @@
 			files = (
 				A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */,
 				A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */,
-				A441ECE225666ED100D28158 /* LoginViewController.swift in Sources */,
 				A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */,
 				A40C8A9625663E390088A1D6 /* AppDelegate.swift in Sources */,
 				A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */,
 				A426AA4225676BDD00A40A53 /* TabBarController.swift in Sources */,
-				A441ECF125666F8A00D28158 /* SettingViewController.swift in Sources */,
 				A40C8A9825663E390088A1D6 /* SceneDelegate.swift in Sources */,
 				A40EF1E9257E0DE20024A7C5 /* ReportData.swift in Sources */,
-				A4CBA57E25A134C200024842 /* TotalMinuteData.swift in Sources */,
-				A40F26F3257A842900E1A060 /* Const.swift in Sources */,
 				A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EngineerApp/EngineerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HSC6WJMH6;
 				INFOPLIST_FILE = EngineerApp/Info.plist;
@@ -557,6 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.05;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kazuma.miura2.EngineerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -571,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EngineerApp/EngineerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HSC6WJMH6;
 				INFOPLIST_FILE = EngineerApp/Info.plist;
@@ -579,6 +576,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.05;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kazuma.miura2.EngineerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
