@@ -11,23 +11,22 @@ import RealmSwift
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate
 {
     let postTableViewCell = PostTableViewCell.self
-    @IBOutlet weak var tableView: UITableView!
     let realm = try! Realm()
     var reportArray = try! Realm().objects(ReportData.self).sorted(byKeyPath: "date", ascending: false)
     
+    
+    @IBOutlet private weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "Cell")
+        tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)
         navigationItem.title = "学習記録"
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("DEBUG_PRINT: viewWillAppear")
         tableView.reloadData()
     }
     
@@ -36,10 +35,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
-        //cellのdelegateにselfを渡す
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
         cell.deletedelegate = self
-        //cellにIndex情報を渡す
         cell.index = indexPath
         cell.setReportData(reportArray[indexPath.row])
         return cell
@@ -53,16 +50,13 @@ extension HomeViewController {
             print("キャンセル")
         }
         let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
-            // データベースから削除する
             try! self.realm.write {
                 self.realm.delete(self.reportArray[index.row])
                 self.tableView.deleteRows(at: [index], with: .fade)
             }
         }
-        //アラートに設定を反映させる
         alert.addAction(okAction)
         alert.addAction(cancelAction)
-        //アラート画面を表示させる
         present(alert, animated: true, completion: nil)
     }
 }

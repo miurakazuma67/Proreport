@@ -279,7 +279,7 @@
                         <outlet property="label" destination="Pf2-hJ-eZY" id="uw9-sv-F3B"/>
                         <outlet property="languageTextField" destination="vMN-0g-w4n" id="usE-xR-whN"/>
                         <outlet property="minuteTextField" destination="EVL-vi-b88" id="UII-9Q-LdD"/>
-                        <outlet property="postButton" destination="tV8-t0-3wu" id="KsC-0B-czq"/>
+                        <outlet property="postButton" destination="tV8-t0-3wu" id="n59-Zl-fsv"/>
                         <outlet property="textView" destination="uuI-EO-f7r" id="IvJ-Uy-LfD"/>
                         <outlet property="wordCountLabel" destination="6Tc-Dk-iO6" id="TaQ-Hy-VbZ"/>
                     </connections>

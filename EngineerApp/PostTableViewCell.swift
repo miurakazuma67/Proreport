@@ -22,21 +22,20 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
-    //Index情報を保持する
+    static var identifier: String { String(describing: self) }
+    static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
+    
     var index: IndexPath!
     weak var deletedelegate: PostTableViewCellDelegate?
     
-//プロトコルを変数化し、使えるようにした。
     var count = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
         dateLabel.textColor = UIColor.gray
     }
     

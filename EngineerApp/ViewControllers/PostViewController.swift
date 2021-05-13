@@ -11,21 +11,20 @@ import SVProgressHUD
 
 class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var languageTextField: UITextField!
+    @IBOutlet private weak var postButton: SimpleButton!
+    @IBOutlet private weak var hourTextField: UITextField!
+    @IBOutlet private weak var minuteTextField: UITextField!
+    @IBOutlet private weak var wordCountLabel: UILabel!
+    @IBOutlet private weak var textView: UITextView!
+    fileprivate var maxWordCount: Int = 140 //最大文字数
+    
     var reportData: ReportData!
-    @IBOutlet weak var languageTextField: UITextField!
     var pickerView: UIPickerView = UIPickerView()
+    
     // ピッカーに表示させるデータ
     var data: [String] = ["HTML&CSS", "PHP", "JavaScript", "Java", "Swift", "Ruby", "C", "C#", "Unity", "Python", "Laravel", "SQL", "VBA", "VB.net", "React", "COBOL", "GO", "Perl", "TypeScript", "Kothin", "Scala", "Flutter", "その他"]
-    
-    @IBOutlet weak var hourTextField: UITextField!
-    @IBOutlet weak var minuteTextField: UITextField!
-    @IBOutlet weak var wordCountLabel: UILabel!
-    @IBOutlet weak var textView: UITextView!
-    fileprivate var maxWordCount: Int = 140 //最大文字数
-    fileprivate let placeholder: String = "メモ"
-    //プレイスホルダー
-    @IBOutlet weak var postButton: UIButton!
     
     //varidate()メソッドのため、IBAction接続をする
     @IBAction func languageEditChanged(_ sender: UITextField) {
@@ -74,14 +73,13 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         self.wordCountLabel.text = "140"
     }
     
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
     
     @IBAction func cancelButton(_ sender: Any) {
 
         let alert: UIAlertController = UIAlertController(title: "記録をキャンセルしますか？", message: "", preferredStyle:  UIAlertController.Style.alert)
 
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
-            // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             print("OK")
             //すべてのtextField,textViewの文字列を空にする
@@ -140,10 +138,7 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         swipeDownGesture.direction = .down
         self.view.addGestureRecognizer(swipeDownGesture)
-        
-        if textView.text.isEmpty {
-            textView.text = placeholder
-        }
+
         wordCountLabel.textColor = UIColor.gray
         postButton.backgroundColor = UIColor.cyan
         cancelButton.backgroundColor = UIColor.darkGray
@@ -217,18 +212,6 @@ extension PostViewController {
         let existingLines = textView.text.components(separatedBy: .newlines)//既に存在する改行数
         if existingLines.count <= 7 {
             self.wordCountLabel.text = "\(maxWordCount - textView.text.count)"
-        }
-    }
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "メモ" {
-            textView.text = nil
-            textView.textColor = UIColor(named:"textColor")
-        }
-    }
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.textColor = .darkGray
-            textView.text = "メモ"
         }
     }
 }

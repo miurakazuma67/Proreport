@@ -10,8 +10,8 @@ import RealmSwift
 
 class ReportViewController: UIViewController {
     
-    @IBOutlet weak var totalHourLabel: UILabel!
-    @IBOutlet weak var totalMinuteLabel: UILabel!
+    @IBOutlet private weak var totalHourLabel: UILabel!
+    @IBOutlet private weak var totalMinuteLabel: UILabel!
     
     var hour = 0
     var minute = 0
@@ -36,8 +36,8 @@ class ReportViewController: UIViewController {
         }
         //minuteが60を超えてしまった場合に、超えた分をhourに加えて、残りをminuteとする
         if minute >= 59 {
-            self.hour += minute/60
-            self.minute = minute%60
+            self.hour += minute / 60
+            self.minute = minute % 60
         }
         self.totalHourLabel.text = "\(hour)"
         self.totalMinuteLabel.text = "\(minute)"

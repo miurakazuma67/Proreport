@@ -135,14 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				A41F87DF25C96886003D3D54 /* EngineerApp.entitlements */,
-				A40C8A9525663E390088A1D6 /* AppDelegate.swift */,
-				A40C8A9725663E390088A1D6 /* SceneDelegate.swift */,
-				A441ECE625666EF100D28158 /* HomeViewController.swift */,
-				A441ECEB25666F7400D28158 /* PostViewController.swift */,
-				A40EF1E8257E0DE20024A7C5 /* ReportData.swift */,
+				A41F69C5264CE766003B48C0 /* Models */,
+				A41F69C4264CE739003B48C0 /* ViewControllers */,
 				A4455025256F3C0800B41A09 /* SimpleButton.swift */,
-				A4CD116C2580693900067320 /* GoogleService-Info.plist */,
-				A430D9A02575DE3F00B4A987 /* ReportViewController.swift */,
 				A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */,
 				A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */,
 				A40C8A9B25663E390088A1D6 /* Main.storyboard */,
@@ -150,6 +145,9 @@
 				A426AA4125676BDD00A40A53 /* TabBarController.swift */,
 				A40C8A9E25663E3A0088A1D6 /* Assets.xcassets */,
 				A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */,
+				A4CD116C2580693900067320 /* GoogleService-Info.plist */,
+				A40C8A9525663E390088A1D6 /* AppDelegate.swift */,
+				A40C8A9725663E390088A1D6 /* SceneDelegate.swift */,
 				A40C8AA325663E3A0088A1D6 /* Info.plist */,
 			);
 			path = EngineerApp;
@@ -171,6 +169,24 @@
 				A40C8AB925663E3A0088A1D6 /* Info.plist */,
 			);
 			path = EngineerAppUITests;
+			sourceTree = "<group>";
+		};
+		A41F69C4264CE739003B48C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A441ECE625666EF100D28158 /* HomeViewController.swift */,
+				A441ECEB25666F7400D28158 /* PostViewController.swift */,
+				A430D9A02575DE3F00B4A987 /* ReportViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A41F69C5264CE766003B48C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A40EF1E8257E0DE20024A7C5 /* ReportData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B4A36FA8013CD088B998600F /* Frameworks */ = {

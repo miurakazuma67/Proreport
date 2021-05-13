@@ -14,7 +14,6 @@ class ReportData: Object {
     @objc dynamic var hour: String?
     @objc dynamic var minute: String?
     
-    // id をプライマリーキーとして設定
     override static func primaryKey() -> String? {
         return "id"
     }
