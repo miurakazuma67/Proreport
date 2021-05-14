@@ -1,4 +1,5 @@
 PODS:
+  - RAMAnimatedTabBarController (5.2.0)
   - Realm (5.1.0):
     - Realm/Headers (= 5.1.0)
   - Realm/Headers (5.1.0)
@@ -7,20 +8,23 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - RAMAnimatedTabBarController
   - RealmSwift (= 5.1.0)
   - SVProgressHUD (= 2.2.5)
 
 SPEC REPOS:
   trunk:
+    - RAMAnimatedTabBarController
     - Realm
     - RealmSwift
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
   RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: b0f8b51f122420d43499e04dfc64b20f42f2f1d0
+PODFILE CHECKSUM: e50242b4f3fda3067c44dd8362bbec2607b39c0d
 
 COCOAPODS: 1.10.0

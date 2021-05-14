@@ -9,18 +9,19 @@ import UIKit
 import RealmSwift
 import SVProgressHUD
 
+// MARK: delegate protocol
 protocol PostTableViewCellDelegate: class {
     func deleteButtonTapped(index: IndexPath)
 }
 
 class PostTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var languageLabel: UILabel!
-    @IBOutlet weak var hourLabel: UILabel!
-    @IBOutlet weak var minuteLabel: UILabel!
-    @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet private weak var deleteButton: UIButton!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var languageLabel: UILabel!
+    @IBOutlet private weak var hourLabel: UILabel!
+    @IBOutlet private weak var minuteLabel: UILabel!
+    @IBOutlet private weak var captionLabel: UILabel!
     
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
@@ -28,7 +29,7 @@ class PostTableViewCell: UITableViewCell {
     var index: IndexPath!
     weak var deletedelegate: PostTableViewCellDelegate?
     
-    var count = 0
+    var count: Int? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()

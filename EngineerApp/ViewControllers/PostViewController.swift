@@ -42,10 +42,10 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // Realmに投稿データを保存する
         let reportData = ReportData()
         reportData.id = 0
-        reportData.caption = self.textView.text!
-        reportData.language = self.languageTextField.text!
-        reportData.hour = hourTextField.text!
-        reportData.minute = minuteTextField.text!
+        reportData.caption = self.textView.text ?? ""
+        reportData.language = self.languageTextField.text ?? ""
+        reportData.hour = hourTextField.text ?? ""
+        reportData.minute = minuteTextField.text ?? ""
         reportData.date = Date()
         
         let realm = try! Realm()
