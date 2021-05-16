@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post View Controller-->
+        <!--Item-->
         <scene sceneID="Fyg-u1-TsU">
             <objects>
                 <viewController storyboardIdentifier="Post" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gRT-we-Sm0" customClass="PostViewController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,9 @@
                             <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="vMN-0g-w4n" secondAttribute="trailing" constant="40" id="wrs-RV-RLC"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="H57-r7-uO0"/>
                     <navigationItem key="navigationItem" id="wWD-2G-nqx"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cancelButton" destination="csU-FL-IcI" id="OJO-Ji-Psr"/>
                         <outlet property="hourTextField" destination="ech-1E-n5P" id="bY9-W9-EMT"/>
@@ -187,7 +189,7 @@
         <!--記録-->
         <scene sceneID="r29-2e-qys">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController-mqB-cW-ej9" automaticallyAdjustsScrollViewInsets="NO" id="mqB-cW-ej9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mqB-cW-ej9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="記録" image="highlighter" catalog="system" id="JIY-OA-QEx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4lQ-WC-UAZ">

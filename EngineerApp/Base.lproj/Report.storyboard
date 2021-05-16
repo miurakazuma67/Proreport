@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Report View Controller-->
+        <!--Item-->
         <scene sceneID="aZG-hV-I9E">
             <objects>
                 <viewController storyboardIdentifier="Report" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irr-ja-iHX" customClass="ReportViewController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,9 @@
                             <constraint firstItem="fHu-4q-qER" firstAttribute="centerX" secondItem="dy9-n7-gJQ" secondAttribute="centerX" id="R8R-MA-W3h"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="thN-P4-wPU"/>
                     <navigationItem key="navigationItem" id="aEW-Gn-lXM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="totalHourLabel" destination="Gin-Ox-RVx" id="R0b-ET-PDn"/>
                         <outlet property="totalMinuteLabel" destination="rjU-5j-91M" id="xPe-R1-rWr"/>
@@ -82,7 +84,7 @@
         <!--レポート-->
         <scene sceneID="BAA-WW-M10">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController-GcM-Ks-2J6" automaticallyAdjustsScrollViewInsets="NO" id="GcM-Ks-2J6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GcM-Ks-2J6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="レポート" image="chart.bar" catalog="system" id="cJ6-UY-ke1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQC-SK-Tlz">
