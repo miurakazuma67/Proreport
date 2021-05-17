@@ -19,6 +19,9 @@
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
 		A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4455025256F3C0800B41A09 /* SimpleButton.swift */; };
 		A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */; };
+		A498A7E826521E9C00D1B46F /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7E726521E9C00D1B46F /* Post.storyboard */; };
+		A498A7ED26521FC900D1B46F /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7EC26521FC900D1B46F /* Report.storyboard */; };
+		A498A7F226521FD300D1B46F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7F126521FD300D1B46F /* Home.storyboard */; };
 		A4AADAEF25D660F000860F4A /* アプリアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = A4AADAEE25D660F000860F4A /* アプリアイコン.png */; };
 		A4CD118F25806BC700067320 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4CD116C2580693900067320 /* GoogleService-Info.plist */; };
 		A4CD119D25807F4E00067320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8A9B25663E390088A1D6 /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 		A441ECE625666EF100D28158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A4455025256F3C0800B41A09 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		A498A7E726521E9C00D1B46F /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		A498A7EC26521FC900D1B46F /* Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
+		A498A7F126521FD300D1B46F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A4AADAEE25D660F000860F4A /* アプリアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アプリアイコン.png"; sourceTree = "<group>"; };
 		A4CD116C2580693900067320 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,8 +145,8 @@
 				A41F69C4264CE739003B48C0 /* ViewControllers */,
 				A4455025256F3C0800B41A09 /* SimpleButton.swift */,
 				A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */,
+				A45EF8872652351300DAD5BA /* Storyboards */,
 				A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */,
-				A40C8A9B25663E390088A1D6 /* Main.storyboard */,
 				A4AADAEE25D660F000860F4A /* アプリアイコン.png */,
 				A426AA4125676BDD00A40A53 /* TabBarController.swift */,
 				A40C8A9E25663E3A0088A1D6 /* Assets.xcassets */,
@@ -187,6 +193,17 @@
 				A40EF1E8257E0DE20024A7C5 /* ReportData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A45EF8872652351300DAD5BA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A498A7EC26521FC900D1B46F /* Report.storyboard */,
+				A498A7E726521E9C00D1B46F /* Post.storyboard */,
+				A498A7F126521FD300D1B46F /* Home.storyboard */,
+				A40C8A9B25663E390088A1D6 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		B4A36FA8013CD088B998600F /* Frameworks */ = {
@@ -319,8 +336,11 @@
 				A4FC9A892580A886005CAE32 /* PostTableViewCell.xib in Resources */,
 				A4CD118F25806BC700067320 /* GoogleService-Info.plist in Resources */,
 				A4D8D5A625B41CD30034BA53 /* Assets.xcassets in Resources */,
+				A498A7F226521FD300D1B46F /* Home.storyboard in Resources */,
 				A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */,
+				A498A7ED26521FC900D1B46F /* Report.storyboard in Resources */,
 				A4AADAEF25D660F000860F4A /* アプリアイコン.png in Resources */,
+				A498A7E826521E9C00D1B46F /* Post.storyboard in Resources */,
 				A4CD119D25807F4E00067320 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
