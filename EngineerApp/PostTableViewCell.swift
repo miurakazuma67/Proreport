@@ -14,7 +14,7 @@ protocol PostTableViewCellDelegate: class {
     func deleteButtonTapped(index: IndexPath)
 }
 
-class PostTableViewCell: UITableViewCell {
+final class PostTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var dateLabel: UILabel!

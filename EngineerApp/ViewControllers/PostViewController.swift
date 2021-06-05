@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 import SVProgressHUD
 
-class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
+final class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var languageTextField: UITextField!
@@ -18,15 +18,13 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet private weak var minuteTextField: UITextField!
     @IBOutlet private weak var wordCountLabel: UILabel!
     @IBOutlet private weak var textView: UITextView!
-    fileprivate var maxWordCount: Int = 140 //最大文字数
+    fileprivate var maxWordCount: Int = 140
     
     var reportData: ReportData!
     var pickerView: UIPickerView = UIPickerView()
     
-    // ピッカーに表示させるデータ
     var data: [String] = ["HTML&CSS", "PHP", "JavaScript", "Java", "Swift", "Ruby", "C", "C#", "Unity", "Python", "Laravel", "SQL", "VBA", "VB.net", "React", "COBOL", "GO", "Perl", "TypeScript", "Kothin", "Scala", "Flutter", "その他"]
-    
-    //varidate()メソッドのため、IBAction接続をする
+
     @IBAction func languageEditChanged(_ sender: UITextField) {
         self.validate()
     }
@@ -39,7 +37,6 @@ class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func postButton(_ sender: Any) {
         SVProgressHUD.show()
-        // Realmに投稿データを保存する
         let reportData = ReportData()
         reportData.id = 0
         reportData.caption = self.textView.text ?? ""

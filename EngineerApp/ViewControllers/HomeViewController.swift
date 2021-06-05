@@ -8,12 +8,11 @@
 import UIKit
 import RealmSwift
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate
+final class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate
 {
     let postTableViewCell = PostTableViewCell.self
     let realm = try! Realm()
     var reportArray = try! Realm().objects(ReportData.self).sorted(byKeyPath: "date", ascending: false)
-    
     
     @IBOutlet private weak var tableView: UITableView!
 
@@ -46,15 +45,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 extension HomeViewController {
     func deleteButtonTapped(index: IndexPath){
         let alert: UIAlertController = UIAlertController(title: "注意", message: "削除してもいいですか？", preferredStyle: .actionSheet)
+        
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel) { (UIAlertAction) in
             print("キャンセル")
         }
+        
         let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
             try! self.realm.write {
                 self.realm.delete(self.reportArray[index.row])
                 self.tableView.deleteRows(at: [index], with: .fade)
             }
         }
+        
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)

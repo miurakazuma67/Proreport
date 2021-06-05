@@ -9,5 +9,6 @@ target 'EngineerApp' do
   pod 'RealmSwift','5.1.0'
   pod 'SVProgressHUD','2.2.5'
   pod 'RAMAnimatedTabBarController'
+  pod 'IBAnimatable'
 
 end

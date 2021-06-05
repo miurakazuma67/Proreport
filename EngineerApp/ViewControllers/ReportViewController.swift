@@ -7,8 +7,9 @@
 
 import UIKit
 import RealmSwift
+import IBAnimatable
 
-class ReportViewController: UIViewController {
+final class ReportViewController: UIViewController {
     
     @IBOutlet private weak var totalHourLabel: UILabel!
     @IBOutlet private weak var totalMinuteLabel: UILabel!
