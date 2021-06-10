@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 import SVProgressHUD
 
-final class PostViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
+final class PostViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var languageTextField: UITextField!
@@ -18,19 +18,17 @@ final class PostViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet private weak var minuteTextField: UITextField!
     @IBOutlet private weak var wordCountLabel: UILabel!
     @IBOutlet private weak var textView: UITextView!
-    fileprivate var maxWordCount: Int = 140
     
     var reportData: ReportData!
-    var pickerView: UIPickerView = UIPickerView()
-    
-    var data: [String] = ["HTML&CSS", "PHP", "JavaScript", "Java", "Swift", "Ruby", "C", "C#", "Unity", "Python", "Laravel", "SQL", "VBA", "VB.net", "React", "COBOL", "GO", "Perl", "TypeScript", "Kothin", "Scala", "Flutter", "その他"]
 
     @IBAction func languageEditChanged(_ sender: UITextField) {
         self.validate()
     }
+    
     @IBAction func hourEditChanged(_ sender: UITextField) {
         self.validate()
     }
+    
     @IBAction func minuteEditChanged(_ sender: UITextField) {
         self.validate()
     }
@@ -66,8 +64,6 @@ final class PostViewController: UIViewController, UIPickerViewDelegate, UIPicker
         minuteTextField.text = ""
         //validate呼び出し
         self.validate()
-        //文字数カウントをリセット
-        self.wordCountLabel.text = "140"
     }
     
     @IBOutlet private weak var cancelButton: UIButton!
@@ -85,7 +81,6 @@ final class PostViewController: UIViewController, UIPickerViewDelegate, UIPicker
             self.hourTextField.text = ""
             self.minuteTextField.text = ""
             self.validate()
-            self.dismissKeyboard()
         })
 
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
@@ -99,7 +94,7 @@ final class PostViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "学習内容を記録しよう！"
+        navigationItem.title = "学習内容を記録する"
         self.validate()
         languageTextField.textColor = UIColor(named:"textColor")
         hourTextField.textColor = UIColor(named:"textColor")
@@ -111,43 +106,8 @@ final class PostViewController: UIViewController, UIPickerViewDelegate, UIPicker
         hourTextField.backgroundColor = UIColor(named: "textFieldColor")
         minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
         textView.backgroundColor = UIColor(named: "textFieldColor")
-        
-        // ピッカー設定
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        pickerView.showsSelectionIndicator = true
-        
-        // 決定バーの生成
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
-        let spacelItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
-        toolbar.setItems([spacelItem, doneItem], animated: true)
-        
-        // インプットビュー設定
-        languageTextField.inputView = pickerView
-        languageTextField.inputAccessoryView = toolbar
-        
-        self.textView.delegate = self
-        //タップでキーボードを下げる
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        self.view.addGestureRecognizer(tapGesture)
-        //下にスワイプでキーボードを下げる
-        let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        swipeDownGesture.direction = .down
-        self.view.addGestureRecognizer(swipeDownGesture)
-
-        wordCountLabel.textColor = UIColor.gray
-        postButton.backgroundColor = UIColor.cyan
-        cancelButton.backgroundColor = UIColor.darkGray
     }
-    // 決定ボタン押下
-    @objc func done() {
-        languageTextField.endEditing(true)
-        languageTextField.text = "\(data[pickerView.selectedRow(inComponent: 0)])"
-    }
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
-    }
+    
     private func validate() {
         //postButtonの有効/無効を切り替える
         if languageTextField.text == "" {
@@ -179,36 +139,6 @@ final class PostViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
 }
+
 extension PostViewController {
-    
-    // ドラムロールの列数
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // ドラムロールの行数
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
-    }
-    
-    // ドラムロールの各タイトル
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
-    }
-}
-//ここまでlanguageTextFieldの処理
-extension PostViewController {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let existingLines = textView.text.components(separatedBy: .newlines)//既に存在する改行数
-        let newLines = text.components(separatedBy: .newlines)//新規改行数
-        let linesAfterChange = existingLines.count + newLines.count - 1 //最終改行数。-1は編集したら必ず1改行としてカウントされるから。
-        return linesAfterChange <= 7 && textView.text.count + (text.count - range.length) <= maxWordCount
-    }
-    
-    func textViewDidChange(_ textView: UITextView) {
-        let existingLines = textView.text.components(separatedBy: .newlines)//既に存在する改行数
-        if existingLines.count <= 7 {
-            self.wordCountLabel.text = "\(maxWordCount - textView.text.count)"
-        }
-    }
 }
