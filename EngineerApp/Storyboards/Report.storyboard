@@ -85,7 +85,7 @@
         <!--レポート-->
         <scene sceneID="BAA-WW-M10">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GcM-Ks-2J6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GcM-Ks-2J6" customClass="MyNavigationController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="レポート" image="chart.bar" catalog="system" id="cJ6-UY-ke1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQC-SK-Tlz">

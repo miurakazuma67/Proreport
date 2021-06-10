@@ -16,7 +16,6 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet private weak var postButton: SimpleButton!
     @IBOutlet private weak var hourTextField: UITextField!
     @IBOutlet private weak var minuteTextField: UITextField!
-    @IBOutlet private weak var wordCountLabel: UILabel!
     @IBOutlet private weak var textView: UITextView!
     
     var reportData: ReportData!
@@ -137,7 +136,6 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         postButton.isEnabled  = false //ボタン無効
         postButton.alpha = 0.5
     }
-    
 }
 
 extension PostViewController {

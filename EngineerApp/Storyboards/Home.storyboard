@@ -43,7 +43,7 @@
         <!--ホーム-->
         <scene sceneID="7Xy-Ip-Iqu">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController-TMO-wt-gth" automaticallyAdjustsScrollViewInsets="NO" id="TMO-wt-gth" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController-TMO-wt-gth" automaticallyAdjustsScrollViewInsets="NO" id="TMO-wt-gth" customClass="MyNavigationController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ホーム" image="clock" catalog="system" id="yjb-3e-tf0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4Z-ax-I1y">
