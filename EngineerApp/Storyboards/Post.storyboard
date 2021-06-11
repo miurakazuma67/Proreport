@@ -68,20 +68,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-aP-Jdu">
-                                <rect key="frame" x="30" y="163" width="290" height="30"/>
+                                <rect key="frame" x="30" y="163" width="200" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勉強時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGn-7k-gnG">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="X68-ci-YkE"/>
-                                            <constraint firstAttribute="width" constant="80" id="cXa-LB-Kvt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" red="0.18139820279999999" green="0.62755090479999998" blue="0.87457496759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ech-1E-n5P">
-                                        <rect key="frame" x="90" y="0.0" width="50" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Kal-it-bCn"/>
                                             <constraint firstAttribute="height" constant="30" id="wex-VP-Hpy"/>
@@ -93,7 +83,7 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeE-2B-B2u">
-                                        <rect key="frame" x="150" y="0.0" width="40" height="30"/>
+                                        <rect key="frame" x="60" y="0.0" width="40" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="8JA-kG-ceD"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Twd-Q2-oIi"/>
@@ -104,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-vi-b88">
-                                        <rect key="frame" x="200" y="0.0" width="50" height="30"/>
+                                        <rect key="frame" x="110" y="0.0" width="50" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="qUS-g4-pz6"/>
                                             <constraint firstAttribute="height" constant="30" id="qcT-Jg-j5b"/>
@@ -116,7 +106,7 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bO-0s-dVD">
-                                        <rect key="frame" x="260" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="170" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="IIa-26-jJ8"/>
                                             <constraint firstAttribute="height" constant="30" id="m5M-tg-Ip6"/>

@@ -25,6 +25,7 @@ class SimpleButton: UIButton {
         // 角を丸くする
         self.layer.cornerRadius = 40 / 2
         self.layer.cornerCurve = .continuous
+        self.backgroundColor = UIColor(hexString: "7868e6")
         // ボタンを押している時にボタンの色を暗くするためのView
         selectView = UIView(frame: self.bounds)
         selectView.backgroundColor = UIColor.black
