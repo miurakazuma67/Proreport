@@ -105,6 +105,7 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         hourTextField.backgroundColor = UIColor(named: "textFieldColor")
         minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
         textView.backgroundColor = UIColor(named: "textFieldColor")
+        postButton.backgroundColor = UIColor(hexString: "b8b5ff")
     }
     
     private func validate() {

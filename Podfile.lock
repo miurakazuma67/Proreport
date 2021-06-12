@@ -1,4 +1,5 @@
 PODS:
+  - DSFloatingButton (1.0.1)
   - IBAnimatable (6.1.0)
   - RAMAnimatedTabBarController (5.2.0)
   - Realm (5.1.0):
@@ -9,6 +10,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - DSFloatingButton
   - IBAnimatable
   - RAMAnimatedTabBarController
   - RealmSwift (= 5.1.0)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DSFloatingButton
     - IBAnimatable
     - RAMAnimatedTabBarController
     - Realm
@@ -23,12 +26,13 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  DSFloatingButton: 2611b44e75736cd2f2686691ee4d2c16f2b62391
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
   RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 75376fa43348d4da65547548b0d68ddca550b9c5
+PODFILE CHECKSUM: 8a3772f27fd7a0cf5958503ad225f1df18ab9546
 
 COCOAPODS: 1.10.0

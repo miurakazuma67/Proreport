@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-t0-3wu" customClass="SimpleButton" customModule="EngineerApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-t0-3wu" customClass="DSFloatingButton" customModule="DSFloatingButton">
                                 <rect key="frame" x="57" y="383" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="K8d-5W-2Vc"/>
@@ -31,7 +31,7 @@
                                     <action selector="postButton:" destination="gRT-we-Sm0" eventType="touchUpInside" id="lao-Jt-anJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csU-FL-IcI" customClass="SimpleButton" customModule="EngineerApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csU-FL-IcI" customClass="DSFloatingButton" customModule="DSFloatingButton">
                                 <rect key="frame" x="57" y="433" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="40C-BP-dNF"/>
@@ -184,6 +184,14 @@
             <point key="canvasLocation" x="1890" y="803"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="csU-FL-IcI">
+            <size key="intrinsicContentSize" width="92" height="34"/>
+        </designable>
+        <designable name="tV8-t0-3wu">
+            <size key="intrinsicContentSize" width="78" height="35"/>
+        </designable>
+    </designables>
     <resources>
         <image name="highlighter" catalog="system" width="128" height="119"/>
         <namedColor name="viewColor">
