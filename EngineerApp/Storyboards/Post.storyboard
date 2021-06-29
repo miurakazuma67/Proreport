@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,58 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-t0-3wu" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                <rect key="frame" x="57" y="383" width="300" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="K8d-5W-2Vc"/>
-                                    <constraint firstAttribute="height" constant="40" id="c5W-xK-ruR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
-                                <state key="normal" title="記録する">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" systemColor="systemBlueColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.36788147570000002" green="0.63993015170000001" blue="0.87457496759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="postButton:" destination="gRT-we-Sm0" eventType="touchUpInside" id="lao-Jt-anJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csU-FL-IcI" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                <rect key="frame" x="57" y="433" width="300" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="40C-BP-dNF"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ClA-Ka-7kx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
-                                <state key="normal" title="キャンセル">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" systemColor="systemIndigoColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.47220274509999999" green="0.58967896959999999" blue="0.87457496759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelButton:" destination="gRT-we-Sm0" eventType="touchUpInside" id="pBj-88-pxK"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-0g-w4n">
                                 <rect key="frame" x="140" y="108" width="234" height="35"/>
                                 <constraints>
@@ -89,7 +36,7 @@
                                     <constraint firstAttribute="width" constant="100" id="16j-Hb-trI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <color key="textColor" red="0.18139820279999999" green="0.62755090479999998" blue="0.87457496759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-aP-Jdu">
@@ -115,7 +62,7 @@
                                             <constraint firstAttribute="width" constant="40" id="uYP-WR-1d7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" red="0.19187212179999999" green="0.66378564839999998" blue="0.9250728627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-vi-b88">
@@ -137,12 +84,12 @@
                                             <constraint firstAttribute="height" constant="30" id="m5M-tg-Ip6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" red="0.19187212179999999" green="0.66378564839999998" blue="0.9250728627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uuI-EO-f7r">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uuI-EO-f7r">
                                 <rect key="frame" x="10" y="253" width="394" height="120"/>
                                 <color key="backgroundColor" name="viewColor"/>
                                 <constraints>
@@ -161,26 +108,24 @@
                             <constraint firstItem="vMN-0g-w4n" firstAttribute="top" secondItem="aVp-DI-hTo" secondAttribute="top" constant="20" id="2Sp-Cx-OKi"/>
                             <constraint firstItem="uuI-EO-f7r" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="10" id="2pM-HP-OOV"/>
                             <constraint firstItem="Pf2-hJ-eZY" firstAttribute="top" secondItem="aVp-DI-hTo" secondAttribute="top" constant="20" id="8PD-2d-Pct"/>
+                            <constraint firstItem="uuI-EO-f7r" firstAttribute="top" secondItem="4eg-aP-Jdu" secondAttribute="bottom" constant="60" id="ItT-Uj-7PV"/>
                             <constraint firstItem="Pf2-hJ-eZY" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="30" id="VsL-aD-WeD"/>
                             <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="uuI-EO-f7r" secondAttribute="trailing" constant="10" id="aFn-bU-n6n"/>
                             <constraint firstItem="4eg-aP-Jdu" firstAttribute="top" secondItem="vMN-0g-w4n" secondAttribute="bottom" constant="20" id="aub-fa-938"/>
-                            <constraint firstItem="csU-FL-IcI" firstAttribute="centerX" secondItem="GLa-vj-5Mr" secondAttribute="centerX" id="bUW-dH-aVT"/>
-                            <constraint firstItem="csU-FL-IcI" firstAttribute="top" secondItem="tV8-t0-3wu" secondAttribute="bottom" constant="10" id="hta-rV-gnp"/>
-                            <constraint firstItem="tV8-t0-3wu" firstAttribute="top" secondItem="uuI-EO-f7r" secondAttribute="bottom" constant="10" id="qOB-he-SSW"/>
-                            <constraint firstItem="tV8-t0-3wu" firstAttribute="centerX" secondItem="GLa-vj-5Mr" secondAttribute="centerX" id="rXX-ZT-ZOO"/>
+                            <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="uuI-EO-f7r" secondAttribute="trailing" constant="10" id="dhf-dN-jGQ"/>
+                            <constraint firstItem="aVp-DI-hTo" firstAttribute="bottom" secondItem="uuI-EO-f7r" secondAttribute="bottom" constant="440" id="o8v-rr-9mL"/>
                             <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="vMN-0g-w4n" secondAttribute="trailing" constant="40" id="wrs-RV-RLC"/>
+                            <constraint firstItem="uuI-EO-f7r" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="10" id="xOo-xO-Jbg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="H57-r7-uO0"/>
                     <navigationItem key="navigationItem" id="wWD-2G-nqx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cancelButton" destination="csU-FL-IcI" id="OJO-Ji-Psr"/>
                         <outlet property="hourTextField" destination="ech-1E-n5P" id="bY9-W9-EMT"/>
                         <outlet property="label" destination="Pf2-hJ-eZY" id="uw9-sv-F3B"/>
                         <outlet property="languageTextField" destination="vMN-0g-w4n" id="usE-xR-whN"/>
                         <outlet property="minuteTextField" destination="EVL-vi-b88" id="UII-9Q-LdD"/>
-                        <outlet property="postButton" destination="tV8-t0-3wu" id="n59-Zl-fsv"/>
                         <outlet property="textView" destination="uuI-EO-f7r" id="IvJ-Uy-LfD"/>
                     </connections>
                 </viewController>
@@ -209,24 +154,10 @@
             <point key="canvasLocation" x="1890" y="803"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="csU-FL-IcI">
-            <size key="intrinsicContentSize" width="92" height="34"/>
-        </designable>
-        <designable name="tV8-t0-3wu">
-            <size key="intrinsicContentSize" width="78" height="35"/>
-        </designable>
-    </designables>
     <resources>
         <image name="highlighter" catalog="system" width="128" height="119"/>
         <namedColor name="viewColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

@@ -13,13 +13,14 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var languageTextField: UITextField!
-    @IBOutlet private weak var postButton: SimpleButton!
     @IBOutlet private weak var hourTextField: UITextField!
     @IBOutlet private weak var minuteTextField: UITextField!
     @IBOutlet private weak var textView: UITextView!
     
     var reportData: ReportData!
-
+    var stopButtonItem: UIBarButtonItem!
+    
+    
     @IBAction func languageEditChanged(_ sender: UITextField) {
         self.validate()
     }
@@ -67,10 +68,10 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet private weak var cancelButton: UIButton!
     
-    @IBAction func cancelButton(_ sender: Any) {
-
+    @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
+        
         let alert: UIAlertController = UIAlertController(title: "記録をキャンセルしますか？", message: "", preferredStyle:  UIAlertController.Style.alert)
-
+        
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             (action: UIAlertAction!) -> Void in
             print("OK")
@@ -81,7 +82,7 @@ final class PostViewController: UIViewController, UITextViewDelegate {
             self.minuteTextField.text = ""
             self.validate()
         })
-
+        
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
             (action: UIAlertAction!) -> Void in
             print("Cancel")
@@ -93,8 +94,13 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "学習内容を記録する"
+        //MARK: nabigationBar
+        navigationItem.title = "記録する"
+        stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
+        self.navigationItem.leftBarButtonItem = stopButtonItem
+        
         self.validate()
+        //color指定
         languageTextField.textColor = UIColor(named:"textColor")
         hourTextField.textColor = UIColor(named:"textColor")
         minuteTextField.textColor = UIColor(named:"textColor")
@@ -105,39 +111,36 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         hourTextField.backgroundColor = UIColor(named: "textFieldColor")
         minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
         textView.backgroundColor = UIColor(named: "textFieldColor")
-        postButton.backgroundColor = UIColor(hexString: "b8b5ff")
     }
     
     private func validate() {
         //postButtonの有効/無効を切り替える
-        if languageTextField.text == "" {
-            buttonCannotUse()
-        } else {
-            buttonCanUse()
-        }
-        
-        if hourTextField.text == "" {
-            buttonCannotUse()
-        } else {
-            buttonCanUse()
-        }
-        
-        if minuteTextField.text == "" {
-            buttonCannotUse()
-        } else {
-            buttonCanUse()
-        }
+        //        if languageTextField.text == "" {
+        //            buttonCannotUse()
+        //        } else {
+        //            buttonCanUse()
+        //        }
+        //
+        //        if hourTextField.text == "" {
+        //            buttonCannotUse()
+        //        } else {
+        //            buttonCanUse()
+        //        }
+        //
+        //        if minuteTextField.text == "" {
+        //            buttonCannotUse()
+        //        } else {
+        //            buttonCanUse()
+        //        }
+        //    }
+        //
+        //    func buttonCanUse() {
+        //        postButton.isEnabled  = true //ボタン有効
+        //        postButton.alpha = 1.0
+        //    }
+        //    func buttonCannotUse() {
+        //        postButton.isEnabled  = false //ボタン無効
+        //        postButton.alpha = 0.5
+        //    }
     }
-    
-    func buttonCanUse() {
-        postButton.isEnabled  = true //ボタン有効
-        postButton.alpha = 1.0
-    }
-    func buttonCannotUse() {
-        postButton.isEnabled  = false //ボタン無効
-        postButton.alpha = 0.5
-    }
-}
-
-extension PostViewController {
 }
