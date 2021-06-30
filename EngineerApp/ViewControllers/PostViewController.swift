@@ -18,8 +18,8 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet private weak var textView: UITextView!
     
     var reportData: ReportData!
-    var stopButtonItem: UIBarButtonItem!
-    
+    private var stopButtonItem: UIBarButtonItem!
+    private var postButtonItem: UIBarButtonItem!
     
     @IBAction func languageEditChanged(_ sender: UITextField) {
         self.validate()
@@ -33,40 +33,29 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         self.validate()
     }
     
-    @IBAction func postButton(_ sender: Any) {
-        SVProgressHUD.show()
-        let reportData = ReportData()
-        reportData.id = 0
-        reportData.caption = self.textView.text ?? ""
-        reportData.language = self.languageTextField.text ?? ""
-        reportData.hour = hourTextField.text ?? ""
-        reportData.minute = minuteTextField.text ?? ""
-        reportData.date = Date()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //MARK: navigationBar
+        stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
+        postButtonItem = UIBarButtonItem(title: "記録する", style: .done, target: self, action: #selector(postButtonTapped(_:)))
         
-        let realm = try! Realm()
-        try! realm.write {
-            //idの重複を防ぐ
-            let allReportDatas = realm.objects(ReportData.self)
-            if allReportDatas.count != 0 {
-                reportData.id = allReportDatas.max(ofProperty: "id")! + 1
-            }
-            realm.add(reportData)
-        }
-        // HUDで投稿完了を表示する
-        SVProgressHUD.showSuccess(withStatus: "記録が完了しました!")
-        // 投稿処理が完了したので、HomeViewControllerに遷移させる
-        self.tabBarController?.selectedIndex = 0;
+//        ボタン配置
+        self.navigationItem.rightBarButtonItem = postButtonItem
+        self.navigationItem.leftBarButtonItem = stopButtonItem
         
-        //各textFieldの文字を空の文字列にする
-        textView.text = ""
-        languageTextField.text = ""
-        hourTextField.text = ""
-        minuteTextField.text = ""
-        //validate呼び出し
         self.validate()
+        //color指定
+        languageTextField.textColor = UIColor(named:"textColor")
+        hourTextField.textColor = UIColor(named:"textColor")
+        minuteTextField.textColor = UIColor(named:"textColor")
+        textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        textView.layer.borderWidth = 1.0
+        textView.layer.cornerRadius = 5
+        languageTextField.backgroundColor = UIColor(named: "textFieldColor")
+        hourTextField.backgroundColor = UIColor(named: "textFieldColor")
+        minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
+        textView.backgroundColor = UIColor(named: "textFieldColor")
     }
-    
-    @IBOutlet private weak var cancelButton: UIButton!
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
         
@@ -75,7 +64,6 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             (action: UIAlertAction!) -> Void in
             print("OK")
-            //すべてのtextField,textViewの文字列を空にする
             self.textView.text = ""
             self.languageTextField.text = ""
             self.hourTextField.text = ""
@@ -92,25 +80,34 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         present(alert, animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //MARK: nabigationBar
-        navigationItem.title = "記録する"
-        stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
-        self.navigationItem.leftBarButtonItem = stopButtonItem
+    @objc func postButtonTapped(_ sender: UIBarButtonItem) {
+        SVProgressHUD.show()
+        let reportData = ReportData()
+        reportData.id = 0
+        reportData.caption = self.textView.text ?? ""
+        reportData.language = self.languageTextField.text ?? ""
+        reportData.hour = hourTextField.text ?? ""
+        reportData.minute = minuteTextField.text ?? ""
+        reportData.date = Date()
         
+        let realm = try! Realm()
+        try! realm.write {
+            let allReportDatas = realm.objects(ReportData.self)
+            if allReportDatas.count != 0 {
+                reportData.id = allReportDatas.max(ofProperty: "id")! + 1
+            }
+            realm.add(reportData)
+        }
+        SVProgressHUD.showSuccess(withStatus: "記録が完了しました!")
+        // 投稿処理が完了したので、HomeViewControllerに遷移させる
+        self.tabBarController?.selectedIndex = 0;
+        
+        textView.text = ""
+        languageTextField.text = ""
+        hourTextField.text = ""
+        minuteTextField.text = ""
+        //validate呼び出し
         self.validate()
-        //color指定
-        languageTextField.textColor = UIColor(named:"textColor")
-        hourTextField.textColor = UIColor(named:"textColor")
-        minuteTextField.textColor = UIColor(named:"textColor")
-        textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        textView.layer.borderWidth = 1.0
-        textView.layer.cornerRadius = 5
-        languageTextField.backgroundColor = UIColor(named: "textFieldColor")
-        hourTextField.backgroundColor = UIColor(named: "textFieldColor")
-        minuteTextField.backgroundColor = UIColor(named: "textFieldColor")
-        textView.backgroundColor = UIColor(named: "textFieldColor")
     }
     
     private func validate() {
