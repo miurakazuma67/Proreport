@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,30 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-0g-w4n">
-                                <rect key="frame" x="140" y="108" width="234" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="IR1-OX-4RD"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="T0c-Il-4d0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="languageEditChanged:" destination="gRT-we-Sm0" eventType="editingChanged" id="0vD-UW-DTL"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教科名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf2-hJ-eZY">
-                                <rect key="frame" x="30" y="108" width="100" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="0gI-DA-Iqa"/>
-                                    <constraint firstAttribute="width" constant="100" id="16j-Hb-trI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KwG-tt-NKd">
+                                <rect key="frame" x="82" y="153" width="250" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教科名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf2-hJ-eZY">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="0gI-DA-Iqa"/>
+                                            <constraint firstAttribute="width" constant="100" id="16j-Hb-trI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMN-0g-w4n">
+                                        <rect key="frame" x="110" y="0.0" width="140" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="IR1-OX-4RD"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="T0c-Il-4d0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="languageEditChanged:" destination="gRT-we-Sm0" eventType="editingChanged" id="0vD-UW-DTL"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-aP-Jdu">
-                                <rect key="frame" x="30" y="163" width="200" height="30"/>
+                                <rect key="frame" x="107" y="208" width="200" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ech-1E-n5P">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -90,7 +96,7 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uuI-EO-f7r">
-                                <rect key="frame" x="10" y="253" width="394" height="120"/>
+                                <rect key="frame" x="10" y="278" width="394" height="120"/>
                                 <color key="backgroundColor" name="viewColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="PyK-4n-rDj"/>
@@ -99,22 +105,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mL2-oA-h81">
+                                <rect key="frame" x="141.5" y="103" width="131" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="UHE-TW-VmS"/>
+                                    <constraint firstAttribute="height" constant="30" id="iTn-EZ-GHa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aVp-DI-hTo"/>
                         <color key="backgroundColor" name="viewColor"/>
                         <constraints>
-                            <constraint firstItem="4eg-aP-Jdu" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="30" id="0Ma-gL-9v7"/>
-                            <constraint firstItem="vMN-0g-w4n" firstAttribute="leading" secondItem="Pf2-hJ-eZY" secondAttribute="trailing" constant="10" id="1n8-ab-9kI"/>
-                            <constraint firstItem="vMN-0g-w4n" firstAttribute="top" secondItem="aVp-DI-hTo" secondAttribute="top" constant="20" id="2Sp-Cx-OKi"/>
                             <constraint firstItem="uuI-EO-f7r" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="10" id="2pM-HP-OOV"/>
-                            <constraint firstItem="Pf2-hJ-eZY" firstAttribute="top" secondItem="aVp-DI-hTo" secondAttribute="top" constant="20" id="8PD-2d-Pct"/>
-                            <constraint firstItem="uuI-EO-f7r" firstAttribute="top" secondItem="4eg-aP-Jdu" secondAttribute="bottom" constant="60" id="ItT-Uj-7PV"/>
-                            <constraint firstItem="Pf2-hJ-eZY" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="30" id="VsL-aD-WeD"/>
+                            <constraint firstItem="uuI-EO-f7r" firstAttribute="top" secondItem="4eg-aP-Jdu" secondAttribute="bottom" constant="40" id="Fbb-Rs-Tqa"/>
+                            <constraint firstItem="KwG-tt-NKd" firstAttribute="centerX" secondItem="GLa-vj-5Mr" secondAttribute="centerX" id="H49-Lb-cz7"/>
+                            <constraint firstItem="KwG-tt-NKd" firstAttribute="top" secondItem="mL2-oA-h81" secondAttribute="bottom" constant="20" id="UDv-ib-p4O"/>
+                            <constraint firstItem="4eg-aP-Jdu" firstAttribute="top" secondItem="KwG-tt-NKd" secondAttribute="bottom" constant="20" id="Xek-uz-The"/>
                             <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="uuI-EO-f7r" secondAttribute="trailing" constant="10" id="aFn-bU-n6n"/>
-                            <constraint firstItem="4eg-aP-Jdu" firstAttribute="top" secondItem="vMN-0g-w4n" secondAttribute="bottom" constant="20" id="aub-fa-938"/>
                             <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="uuI-EO-f7r" secondAttribute="trailing" constant="10" id="dhf-dN-jGQ"/>
-                            <constraint firstItem="aVp-DI-hTo" firstAttribute="bottom" secondItem="uuI-EO-f7r" secondAttribute="bottom" constant="440" id="o8v-rr-9mL"/>
-                            <constraint firstItem="aVp-DI-hTo" firstAttribute="trailing" secondItem="vMN-0g-w4n" secondAttribute="trailing" constant="40" id="wrs-RV-RLC"/>
+                            <constraint firstItem="4eg-aP-Jdu" firstAttribute="centerX" secondItem="GLa-vj-5Mr" secondAttribute="centerX" id="nDH-Wc-cFB"/>
+                            <constraint firstItem="mL2-oA-h81" firstAttribute="top" secondItem="aVp-DI-hTo" secondAttribute="top" constant="15" id="uVb-zQ-yS0"/>
+                            <constraint firstItem="mL2-oA-h81" firstAttribute="centerX" secondItem="GLa-vj-5Mr" secondAttribute="centerX" id="wnc-7S-VOW"/>
                             <constraint firstItem="uuI-EO-f7r" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="10" id="xOo-xO-Jbg"/>
                         </constraints>
                     </view>
@@ -126,6 +142,7 @@
                         <outlet property="label" destination="Pf2-hJ-eZY" id="uw9-sv-F3B"/>
                         <outlet property="languageTextField" destination="vMN-0g-w4n" id="usE-xR-whN"/>
                         <outlet property="minuteTextField" destination="EVL-vi-b88" id="UII-9Q-LdD"/>
+                        <outlet property="segmentedControl" destination="mL2-oA-h81" id="Qjn-H2-Khi"/>
                         <outlet property="textView" destination="uuI-EO-f7r" id="IvJ-Uy-LfD"/>
                     </connections>
                 </viewController>
@@ -159,5 +176,8 @@
         <namedColor name="viewColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

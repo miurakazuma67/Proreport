@@ -16,8 +16,9 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet private weak var hourTextField: UITextField!
     @IBOutlet private weak var minuteTextField: UITextField!
     @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
     
-    var reportData: ReportData!
+    private var reportData: ReportData!
     private var stopButtonItem: UIBarButtonItem!
     private var postButtonItem: UIBarButtonItem!
     
