@@ -22,7 +22,6 @@ final class ReportViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("DEBUG_PRINT: viewWillAppear")
         self.hour = 0
         self.minute = 0
         //resultsにreportDataの配列を代入
@@ -43,8 +42,10 @@ final class ReportViewController: UIViewController {
         self.totalHourLabel.text = "\(hour)"
         self.totalMinuteLabel.text = "\(minute)"
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(hexString: "FEFFDE")
         navigationItem.title = "合計勉強時間"
     }
 }

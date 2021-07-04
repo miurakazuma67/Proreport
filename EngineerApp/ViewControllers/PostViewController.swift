@@ -46,6 +46,8 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         
         self.validate()
         //color指定
+        view.backgroundColor = UIColor(hexString: "FEFFDE")
+        segmentedControl.selectedSegmentTintColor = UIColor(hexString: "91C788")
         languageTextField.textColor = UIColor(named:"textColor")
         hourTextField.textColor = UIColor(named:"textColor")
         minuteTextField.textColor = UIColor(named:"textColor")
