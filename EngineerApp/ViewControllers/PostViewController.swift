@@ -13,7 +13,7 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var languageTextField: UITextField!
-    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet private weak var timeTextField: UITextField!
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     
@@ -27,14 +27,6 @@ final class PostViewController: UIViewController, UITextViewDelegate {
     
     
     @IBAction func languageEditChanged(_ sender: UITextField) {
-        self.validate()
-    }
-    
-    @IBAction func hourEditChanged(_ sender: UITextField) {
-        self.validate()
-    }
-    
-    @IBAction func minuteEditChanged(_ sender: UITextField) {
         self.validate()
     }
     

@@ -39,9 +39,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="languageEditChanged:" destination="gRT-we-Sm0" eventType="editingChanged" id="0vD-UW-DTL"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -102,9 +99,6 @@
                             <constraint firstItem="mL2-oA-h81" firstAttribute="centerX" secondItem="GLa-vj-5Mr" secondAttribute="centerX" id="wnc-7S-VOW"/>
                             <constraint firstItem="uuI-EO-f7r" firstAttribute="leading" secondItem="aVp-DI-hTo" secondAttribute="leading" constant="10" id="xOo-xO-Jbg"/>
                         </constraints>
-                        <connections>
-                            <outlet property="timeTextField" destination="y1u-26-98t" id="EmX-WZ-f0R"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="H57-r7-uO0"/>
                     <navigationItem key="navigationItem" id="wWD-2G-nqx"/>
@@ -114,7 +108,7 @@
                         <outlet property="languageTextField" destination="vMN-0g-w4n" id="usE-xR-whN"/>
                         <outlet property="segmentedControl" destination="mL2-oA-h81" id="Qjn-H2-Khi"/>
                         <outlet property="textView" destination="uuI-EO-f7r" id="IvJ-Uy-LfD"/>
-                        <outlet property="timeTextField" destination="y1u-26-98t" id="YAl-PZ-UAw"/>
+                        <outlet property="timeTextField" destination="y1u-26-98t" id="XUd-xo-60h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnH-WG-O3A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
