@@ -17,7 +17,6 @@ final class ReportViewController: UIViewController {
     var hour = 0
     var minute = 0
     
-    // 投稿データを格納する配列
     var results: [ReportData] = []
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,10 +28,10 @@ final class ReportViewController: UIViewController {
         let results = realm.objects(ReportData.self)
         
         for content in results {
-            let totalHour = Int(content.hour!)
-            self.hour += totalHour!
-            let totalMinute = Int(content.minute!)
-            self.minute += totalMinute!
+            let totalHour = Int(content.hour)
+            self.hour += totalHour
+            let totalMinute = Int(content.minute)
+            self.minute += totalMinute
         }
         //minuteが60を超えてしまった場合に、超えた分をhourに加えて、残りをminuteとする
         if minute >= 59 {

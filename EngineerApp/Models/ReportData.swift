@@ -11,8 +11,8 @@ class ReportData: Object {
     @objc dynamic var caption: String?
     @objc dynamic var date: Date? = Date()
     @objc dynamic var language: String?
-    @objc dynamic var hour: String?
-    @objc dynamic var minute: String?
+    @objc dynamic var hour = 0
+    @objc dynamic var minute = 0
     
     override static func primaryKey() -> String? {
         return "id"

@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
     var reportArray = try! Realm().objects(ReportData.self).sorted(byKeyPath: "date", ascending: false)
     
     @IBOutlet private weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor(hexString: "FEFFDE")
