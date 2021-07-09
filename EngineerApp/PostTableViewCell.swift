@@ -46,6 +46,7 @@ final class PostTableViewCell: UITableViewCell {
         self.languageLabel.text = reportData.language
         self.hourLabel.text = String(reportData.hour)
         self.minuteLabel.text = String(reportData.minute)
+        
         // 日時の表示
         self.dateLabel.text = ""
         if let date = reportData.date {
