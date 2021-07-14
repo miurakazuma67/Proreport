@@ -9,12 +9,12 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
     
-    
+    var addTaskView: AddTaskView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(addTaskView)
     }
     
-    
-    
+
 }

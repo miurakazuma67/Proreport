@@ -9,25 +9,29 @@ import UIKit
 
 final class AddTaskView: UIView {
     
-    @IBOutlet private weak var dayOrWeekControl: UISegmentedControl!
-    @IBOutlet private weak var addButton: UIButton!
+    // MARK: @IBOutlets
+    @IBOutlet private weak var segmentedButton: UISegmentedControl!
     @IBOutlet private weak var minusButton: UIButton!
+    @IBOutlet private weak var plusButton: UIButton!
     @IBOutlet private weak var taskTableView: UITableView!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.nibInit()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        loadNib()
     }
     
-    // xibファイルを読み込んでviewに重ねる
-    fileprivate func nibInit() {
-
-        // File's OwnerをXibViewにしたので ownerはself になる
-        guard let view = UINib(nibName: "AddTaskView", bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView else {
-            return
-        }
-        
-        view.frame = self.bounds
-        self.addSubview(view)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        loadNib()
     }
+    
+    func loadNib() {
+        if let view = Bundle(for: type(of: self)).loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as? UIView {
+            view.frame = self.bounds
+            self.addSubview(view)
+        }
+    }
+    
+    // MARK: @IBActions
+    
 }
