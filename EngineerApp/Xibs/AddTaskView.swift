@@ -7,7 +7,14 @@
 
 import UIKit
 
+// MARK: Protocol
+protocol AddTaskDelegate: AnyObject {
+    func plusTapped()
+}
+
 final class AddTaskView: UIView {
+    
+    weak var addTaskDelegate: AddTaskDelegate?
     
     // MARK: @IBOutlets
     @IBOutlet private weak var segmentedButton: UISegmentedControl!
@@ -33,5 +40,7 @@ final class AddTaskView: UIView {
     }
     
     // MARK: @IBActions
-    
+    @IBAction func plusButtonTapped(_ sender: UIButton) {
+        addTaskDelegate?.plusTapped()
+    }
 }

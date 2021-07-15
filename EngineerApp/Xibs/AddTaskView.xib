@@ -36,6 +36,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHq-zF-wiO">
                             <rect key="frame" x="241.5" y="1" width="19.5" height="27.5"/>
                             <state key="normal" backgroundImage="plus.app.fill" catalog="system"/>
+                            <connections>
+                                <action selector="plusButtonTapped:" destination="-1" eventType="touchUpInside" id="TWK-OV-cn7"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

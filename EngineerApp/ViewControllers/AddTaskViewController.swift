@@ -7,14 +7,24 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
+final class AddTaskViewController: UIViewController {
     
-    var addTaskView: AddTaskView!
+    private var addTaskView: AddTaskView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(addTaskView)
     }
     
+}
 
+extension AddTaskViewController: AddTaskDelegate {
+    func plusTapped() {
+        let task = TaskViewController.instantiate(
+            didSelect: { [weak self] in
+                self?.dismiss(animated: true)
+            }
+        )
+    }
+    
 }
