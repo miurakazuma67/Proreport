@@ -9,22 +9,26 @@ import UIKit
 
 final class AddTaskViewController: UIViewController {
     
-    private var addTaskView: AddTaskView!
+    private var addTaskView = AddTaskView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(addTaskView)
+        addTaskView.addTaskDelegate = self
     }
     
 }
 
 extension AddTaskViewController: AddTaskDelegate {
-    func plusTapped() {
+    func plusTapped(_ plusButton: AddTaskView) {
         let task = TaskViewController.instantiate(
-            didSelect: { [weak self] in
+            didSelect: { [weak self]  task in
                 self?.dismiss(animated: true)
             }
         )
+        
+        let nav = UINavigationController(rootViewController: task)
+        present(nav, animated: true)
     }
     
 }

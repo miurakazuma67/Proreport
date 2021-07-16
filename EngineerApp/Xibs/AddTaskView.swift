@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: Protocol
 protocol AddTaskDelegate: AnyObject {
-    func plusTapped()
+    func plusTapped(_ plusButton: AddTaskView)
 }
 
 final class AddTaskView: UIView {
@@ -41,6 +41,6 @@ final class AddTaskView: UIView {
     
     // MARK: @IBActions
     @IBAction func plusButtonTapped(_ sender: UIButton) {
-        addTaskDelegate?.plusTapped()
+        addTaskDelegate?.plusTapped(self)
     }
 }

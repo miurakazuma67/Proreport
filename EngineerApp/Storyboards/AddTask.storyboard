@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="ASx-3M-MBm">
             <objects>
-                <viewController storyboardIdentifier="AddTask" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bCO-ed-gTk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTask" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bCO-ed-gTk" customClass="AddTaskViewController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DM6-vq-qyM" customClass="AddTaskView" customModule="EngineerApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
