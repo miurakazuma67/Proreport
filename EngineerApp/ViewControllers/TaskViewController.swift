@@ -9,14 +9,14 @@ import UIKit
 
 class TaskViewController: UIViewController {
     
-    private var didSelect: (String) -> Void = { _ in }
-    
-    static func instantiate(didSelect: @escaping (String) -> Void) -> TaskViewController {
-        let task = UIStoryboard(name: "Task", bundle: nil)
-                    .instantiateInitialViewController() as! TaskViewController
-                task.didSelect = didSelect
-                return task
-    }
+//    private var didSelect: (String) -> Void = { _ in }
+//
+//    static func instantiate(didSelect: @escaping (String) -> Void) -> TaskViewController {
+//        let task = UIStoryboard(name: "Task", bundle: nil)
+//                    .instantiateInitialViewController() as! TaskViewController
+//                task.didSelect = didSelect
+//                return task
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

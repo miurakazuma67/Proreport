@@ -20,15 +20,18 @@ final class AddTaskViewController: UIViewController {
 }
 
 extension AddTaskViewController: AddTaskDelegate {
-    func plusTapped(_ plusButton: AddTaskView) {
-        let task = TaskViewController.instantiate(
-            didSelect: { [weak self]  task in
-                self?.dismiss(animated: true)
-            }
-        )
+    func plusTapped() {
+//        let task = TaskViewController.instantiate(
+//            didSelect: { [weak self]  task in
+//                self?.dismiss(animated: true)
+//            }
+//        )
+//
+//        let nav = UINavigationController(rootViewController: task)
+//        present(nav, animated: true)
         
-        let nav = UINavigationController(rootViewController: task)
-        present(nav, animated: true)
+        let task = self.storyboard?.instantiateViewController(withIdentifier: "Task") as! TaskViewController
+        self.present(task, animated: true, completion: nil)
     }
     
 }
