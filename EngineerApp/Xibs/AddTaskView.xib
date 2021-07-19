@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,10 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskView" customModule="EngineerApp" customModuleProvider="target">
             <connections>
-                <outlet property="minusButton" destination="9q6-gL-KbS" id="vS3-9N-VaI"/>
-                <outlet property="plusButton" destination="PHq-zF-wiO" id="PAF-Ff-H3M"/>
-                <outlet property="segmentedButton" destination="ElR-4s-x3z" id="xaY-dO-ySv"/>
-                <outlet property="taskTableView" destination="xLC-lE-d6W" id="pOM-9M-QYW"/>
+                <outlet property="minusButton" destination="SoI-op-qca" id="plQ-n5-Yi8"/>
+                <outlet property="plusButton" destination="Ooz-WX-JxL" id="Qwm-0W-FPn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,60 +20,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xLC-lE-d6W">
-                    <rect key="frame" x="10" y="145" width="394" height="707"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="222" translatesAutoresizingMaskIntoConstraints="NO" id="Lty-A6-0Ei">
-                    <rect key="frame" x="76.5" y="105" width="261" height="30"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="djv-jj-RVS">
+                    <rect key="frame" x="82" y="64" width="250" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q6-gL-KbS">
-                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="30"/>
-                            <state key="normal" image="minus.square.fill" catalog="system"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-op-qca">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHq-zF-wiO">
-                            <rect key="frame" x="241.5" y="1" width="19.5" height="27.5"/>
-                            <state key="normal" backgroundImage="plus.app.fill" catalog="system"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-WX-JxL">
+                            <rect key="frame" x="204" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
                             <connections>
-                                <action selector="plusButtonTapped:" destination="-1" eventType="touchUpInside" id="TWK-OV-cn7"/>
+                                <action selector="plusTapped:" destination="-1" eventType="touchUpInside" id="zmz-3v-UtS"/>
                             </connections>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" constant="261" id="vhs-F8-SDw"/>
-                        <constraint firstAttribute="height" constant="30" id="wcS-RY-OgN"/>
+                        <constraint firstAttribute="height" constant="30" id="45D-ne-lF2"/>
+                        <constraint firstAttribute="width" constant="250" id="lQq-Es-slq"/>
                     </constraints>
                 </stackView>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ElR-4s-x3z">
-                    <rect key="frame" x="161.5" y="64" width="91" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="91" id="IRf-6p-btZ"/>
-                        <constraint firstAttribute="height" constant="31" id="cuN-Wa-e5F"/>
-                    </constraints>
-                    <segments>
-                        <segment title="今日"/>
-                        <segment title="今週"/>
-                    </segments>
-                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7K6-Bl-eae">
+                    <rect key="frame" x="30" y="134" width="354" height="698"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="xLC-lE-d6W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="2jt-4v-h3y"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xLC-lE-d6W" secondAttribute="bottom" constant="10" id="5C8-34-zg2"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xLC-lE-d6W" secondAttribute="trailing" constant="10" id="BbL-6M-17p"/>
-                <constraint firstItem="ElR-4s-x3z" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Pol-4D-H2l"/>
-                <constraint firstItem="xLC-lE-d6W" firstAttribute="top" secondItem="Lty-A6-0Ei" secondAttribute="bottom" constant="10" id="R1A-ci-U8c"/>
-                <constraint firstItem="Lty-A6-0Ei" firstAttribute="top" secondItem="ElR-4s-x3z" secondAttribute="bottom" constant="10" id="iBs-xr-mK3"/>
-                <constraint firstItem="ElR-4s-x3z" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jhh-YH-Xxg"/>
-                <constraint firstItem="Lty-A6-0Ei" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xrV-ZT-NEs"/>
+                <constraint firstItem="7K6-Bl-eae" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="72K-eI-Wfl"/>
+                <constraint firstItem="djv-jj-RVS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7sa-oy-9iP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7K6-Bl-eae" secondAttribute="bottom" constant="30" id="9Hv-EO-7X4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7K6-Bl-eae" secondAttribute="trailing" constant="30" id="Lwt-KL-rpf"/>
+                <constraint firstItem="djv-jj-RVS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="cnx-23-EAM"/>
+                <constraint firstItem="7K6-Bl-eae" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="p5o-rt-udQ"/>
+                <constraint firstItem="7K6-Bl-eae" firstAttribute="top" secondItem="djv-jj-RVS" secondAttribute="bottom" constant="40" id="s05-gp-WNn"/>
             </constraints>
             <point key="canvasLocation" x="138" y="119"/>
         </view>
     </objects>
     <resources>
-        <image name="minus.square.fill" catalog="system" width="128" height="114"/>
-        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

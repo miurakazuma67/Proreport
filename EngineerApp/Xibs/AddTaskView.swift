@@ -9,18 +9,16 @@ import UIKit
 
 // MARK: Protocol
 protocol AddTaskDelegate: AnyObject {
-    func plusTapped()
+    func addTask()
 }
 
 final class AddTaskView: UIView {
     
-    weak var addTaskDelegate: AddTaskDelegate? = nil
+    weak var addTaskDelegate: AddTaskDelegate?
     
     // MARK: @IBOutlets
-    @IBOutlet private weak var segmentedButton: UISegmentedControl!
-    @IBOutlet private weak var minusButton: UIButton!
     @IBOutlet private weak var plusButton: UIButton!
-    @IBOutlet private weak var taskTableView: UITableView!
+    @IBOutlet private weak var minusButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +38,8 @@ final class AddTaskView: UIView {
     }
     
     // MARK: @IBActions
-    @IBAction func plusButtonTapped(_ sender: UIButton) {
-        self.addTaskDelegate?.plusTapped()
+    @IBAction func plusTapped(_ sender: UIButton) {
+        addTaskDelegate?.addTask()
     }
+
 }

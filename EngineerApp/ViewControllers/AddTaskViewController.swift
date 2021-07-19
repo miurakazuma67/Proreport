@@ -15,21 +15,15 @@ final class AddTaskViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(addTaskView)
         addTaskView.addTaskDelegate = self
+        addTaskView.translatesAutoresizingMaskIntoConstraints = false
     }
     
 }
 
 extension AddTaskViewController: AddTaskDelegate {
-    func plusTapped() {
-//        let task = TaskViewController.instantiate(
-//            didSelect: { [weak self]  task in
-//                self?.dismiss(animated: true)
-//            }
-//        )
-//
-//        let nav = UINavigationController(rootViewController: task)
-//        present(nav, animated: true)
-        
+    func addTask() {
+        //ここのprint文がデバッグできないので、delegateがうまく設定できていない？
+        print("ボタンがタップされました")
         let task = self.storyboard?.instantiateViewController(withIdentifier: "Task") as! TaskViewController
         self.present(task, animated: true, completion: nil)
     }
