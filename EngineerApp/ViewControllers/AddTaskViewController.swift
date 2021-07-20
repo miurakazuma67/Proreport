@@ -22,7 +22,10 @@ extension AddTaskViewController: AddTaskDelegate {
     func addTask() {
         let taskStoryboard: UIStoryboard = UIStoryboard(name: "Task", bundle: nil)
         let task = taskStoryboard.instantiateViewController(withIdentifier: "Task") as! TaskViewController
-        self.present(task, animated: true, completion: nil)
+        let nav = UINavigationController(rootViewController: task)
+        self.present(nav, animated: true, completion: nil)
+        
+        
     }
-    
+
 }
