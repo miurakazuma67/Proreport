@@ -14,7 +14,7 @@ protocol AddTaskDelegate: AnyObject {
 
 final class AddTaskView: UIView {
     
-    weak var addTaskDelegate: AddTaskDelegate?
+    static var addTaskDelegate: AddTaskDelegate?
     
     // MARK: @IBOutlets
     @IBOutlet private weak var plusButton: UIButton!
@@ -39,7 +39,7 @@ final class AddTaskView: UIView {
     
     // MARK: @IBActions
     @IBAction func plusTapped(_ sender: UIButton) {
-        addTaskDelegate?.addTask()
+        AddTaskView.addTaskDelegate?.addTask()
     }
 
 }

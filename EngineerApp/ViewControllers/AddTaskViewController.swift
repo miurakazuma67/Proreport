@@ -9,22 +9,19 @@ import UIKit
 
 final class AddTaskViewController: UIViewController {
     
-    private var addTaskView = AddTaskView()
+    @IBOutlet private weak var addTaskView: AddTaskView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(addTaskView)
-        addTaskView.addTaskDelegate = self
-        addTaskView.translatesAutoresizingMaskIntoConstraints = false
+        AddTaskView.addTaskDelegate = self
     }
     
 }
 
 extension AddTaskViewController: AddTaskDelegate {
     func addTask() {
-        //ここのprint文がデバッグできないので、delegateがうまく設定できていない？
-        print("ボタンがタップされました")
-        let task = self.storyboard?.instantiateViewController(withIdentifier: "Task") as! TaskViewController
+        let taskStoryboard: UIStoryboard = UIStoryboard(name: "Task", bundle: nil)
+        let task = taskStoryboard.instantiateViewController(withIdentifier: "Task") as! TaskViewController
         self.present(task, animated: true, completion: nil)
     }
     
