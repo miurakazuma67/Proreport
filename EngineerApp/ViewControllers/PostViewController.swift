@@ -41,7 +41,6 @@ final class PostViewController: UIViewController, UITextViewDelegate {
 //        ボタン配置
         self.navigationItem.rightBarButtonItem = postButtonItem
         self.navigationItem.leftBarButtonItem = stopButtonItem
-        
         self.validate()
         
         //color指定

@@ -25,7 +25,6 @@ extension AddTaskViewController: AddTaskDelegate {
         let nav = UINavigationController(rootViewController: task)
         self.present(nav, animated: true, completion: nil)
         
-        
     }
-
+    
 }
