@@ -25,6 +25,9 @@
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
 		A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4455025256F3C0800B41A09 /* SimpleButton.swift */; };
 		A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */; };
+		A48AC86126A9648800668C00 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */; };
+		A48AC86226A9648800668C00 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48AC86026A9648800668C00 /* TaskTableViewCell.xib */; };
+		A48AC86A26A96AEC00668C00 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC86926A96AEC00668C00 /* TaskData.swift */; };
 		A4914C1826A8383600B19FF3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4914C1726A8383600B19FF3 /* Colors.swift */; };
 		A498A7E826521E9C00D1B46F /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7E726521E9C00D1B46F /* Post.storyboard */; };
 		A498A7ED26521FC900D1B46F /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7EC26521FC900D1B46F /* Report.storyboard */; };
@@ -85,6 +88,9 @@
 		A441ECE625666EF100D28158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A4455025256F3C0800B41A09 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		A48AC86026A9648800668C00 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		A48AC86926A96AEC00668C00 /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
 		A4914C1726A8383600B19FF3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A498A7E726521E9C00D1B46F /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		A498A7EC26521FC900D1B46F /* Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				A40EF1E8257E0DE20024A7C5 /* ReportData.swift */,
+				A48AC86926A96AEC00668C00 /* TaskData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,6 +241,8 @@
 				A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */,
 				A41AA313269D75860007595B /* AddTaskView.xib */,
 				A41AA31D269D8CF60007595B /* AddTaskView.swift */,
+				A48AC86026A9648800668C00 /* TaskTableViewCell.xib */,
+				A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -375,6 +384,7 @@
 				A4AADAEF25D660F000860F4A /* アプリアイコン.png in Resources */,
 				A498A7E826521E9C00D1B46F /* Post.storyboard in Resources */,
 				A4CD119D25807F4E00067320 /* Tabbar.storyboard in Resources */,
+				A48AC86226A9648800668C00 /* TaskTableViewCell.xib in Resources */,
 				A41AA30F269D32990007595B /* AddTask.storyboard in Resources */,
 				A41AA314269D75860007595B /* AddTaskView.xib in Resources */,
 			);
@@ -431,9 +441,11 @@
 			files = (
 				A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */,
 				A41AA319269D75B20007595B /* AddTaskViewController.swift in Sources */,
+				A48AC86126A9648800668C00 /* TaskTableViewCell.swift in Sources */,
 				A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */,
 				A4914C1826A8383600B19FF3 /* Colors.swift in Sources */,
 				A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */,
+				A48AC86A26A96AEC00668C00 /* TaskData.swift in Sources */,
 				A40C8A9625663E390088A1D6 /* AppDelegate.swift in Sources */,
 				A49B1E9C26721F7000D7340F /* MyNavigationController.swift in Sources */,
 				A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */,

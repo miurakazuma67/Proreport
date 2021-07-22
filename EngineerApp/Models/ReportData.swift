@@ -6,7 +6,7 @@
 //
 import RealmSwift
 
-class ReportData: Object {
+final class ReportData: Object {
     @objc dynamic var id = 0
     @objc dynamic var caption: String?
     @objc dynamic var date: Date? = Date()

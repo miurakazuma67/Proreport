@@ -49,45 +49,45 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Or4-R3-eQX">
                                         <rect key="frame" x="66" y="0.0" width="160" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsW-Bj-zw2">
-                                                <rect key="frame" x="0.0" y="-0.5" width="27" height="30"/>
-                                                <state key="normal" backgroundImage="star" catalog="system">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsW-Bj-zw2">
+                                                <rect key="frame" x="0.0" y="0.0" width="27" height="30"/>
+                                                <state key="normal" image="star" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="star1Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="tsq-NQ-oHd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jx-v7-OY6">
-                                                <rect key="frame" x="33" y="-0.5" width="27.5" height="30"/>
-                                                <state key="normal" backgroundImage="star" catalog="system">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jx-v7-OY6">
+                                                <rect key="frame" x="33" y="0.0" width="27.5" height="30"/>
+                                                <state key="normal" image="star" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="star2Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="KNf-Rl-PD7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-Fe-Kr3">
-                                                <rect key="frame" x="66.5" y="-0.5" width="27" height="30"/>
-                                                <state key="normal" backgroundImage="star" catalog="system">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-Fe-Kr3">
+                                                <rect key="frame" x="66.5" y="0.0" width="27" height="30"/>
+                                                <state key="normal" image="star" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="star3Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="JI3-a0-6zz"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-Ti-z8N">
-                                                <rect key="frame" x="99.5" y="-0.5" width="27.5" height="30"/>
-                                                <state key="normal" backgroundImage="star" catalog="system">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-Ti-z8N">
+                                                <rect key="frame" x="99.5" y="0.0" width="27.5" height="30"/>
+                                                <state key="normal" image="star" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="star4Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="g5f-9H-oNk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-Aq-JpF">
-                                                <rect key="frame" x="133" y="-0.5" width="27" height="30"/>
-                                                <state key="normal" backgroundImage="star" catalog="system">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-Aq-JpF">
+                                                <rect key="frame" x="133" y="0.0" width="27" height="30"/>
+                                                <state key="normal" image="star" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -122,6 +122,7 @@
                         <outlet property="starButton3" destination="cLc-Fe-Kr3" id="LkT-AV-4V6"/>
                         <outlet property="starButton4" destination="TS6-Ti-z8N" id="LR8-If-cQv"/>
                         <outlet property="starButton5" destination="BFV-Aq-JpF" id="G9E-ku-EBa"/>
+                        <outlet property="taskTextField" destination="eMS-Rr-edU" id="65R-4V-B6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ljl-hO-Rkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

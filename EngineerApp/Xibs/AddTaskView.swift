@@ -17,6 +17,7 @@ final class AddTaskView: UIView {
     static var addTaskDelegate: AddTaskDelegate?
     
     // MARK: @IBOutlets
+    @IBOutlet private weak var taskTableView: UITableView!
     @IBOutlet private weak var plusButton: UIButton!
     @IBOutlet private weak var minusButton: UIButton!
     

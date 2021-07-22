@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="minusButton" destination="SoI-op-qca" id="plQ-n5-Yi8"/>
                 <outlet property="plusButton" destination="Ooz-WX-JxL" id="Qwm-0W-FPn"/>
+                <outlet property="taskTableView" destination="7K6-Bl-eae" id="Cbv-Zp-iV9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
