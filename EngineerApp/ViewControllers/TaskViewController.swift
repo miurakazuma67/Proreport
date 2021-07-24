@@ -13,7 +13,6 @@ final class TaskViewController: UIViewController {
     private var cancelButtonItem: UIBarButtonItem!
     let star = UIImage(systemName: "star")?.withRenderingMode(.alwaysTemplate)
     let starFill = UIImage(systemName: "star.fill")?.withRenderingMode(.alwaysTemplate)
-
     
     @IBOutlet private weak var taskTextField: UITextField!
     @IBOutlet private weak var starButton1: UIButton!
