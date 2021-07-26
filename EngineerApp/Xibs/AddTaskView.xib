@@ -28,9 +28,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                             <state key="normal" title="Button"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-WX-JxL">
-                            <rect key="frame" x="204" y="0.0" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-WX-JxL">
+                            <rect key="frame" x="220" y="2.3333333333333321" width="30" height="25.666666666666668"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="4fE-jB-VD7"/>
+                                <constraint firstAttribute="height" constant="30" id="SAb-gq-IYp"/>
+                            </constraints>
+                            <state key="normal" title="Button" backgroundImage="plus" catalog="system"/>
                             <connections>
                                 <action selector="plusTapped:" destination="-1" eventType="touchUpInside" id="zmz-3v-UtS"/>
                             </connections>
@@ -61,6 +65,7 @@
         </view>
     </objects>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

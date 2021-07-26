@@ -18,7 +18,7 @@ final class AddTaskView: UIView {
     
     // MARK: @IBOutlets
     @IBOutlet weak var taskTableView: UITableView!
-    @IBOutlet private weak var plusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
     @IBOutlet private weak var minusButton: UIButton!
     
     override init(frame: CGRect) {

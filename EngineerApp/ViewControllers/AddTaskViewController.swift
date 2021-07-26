@@ -10,16 +10,24 @@ import UIKit
 final class AddTaskViewController: UIViewController {
     
     @IBOutlet private weak var addTaskView: AddTaskView!
+    //Model定義
     var taskData = TaskData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AddTaskView.addTaskDelegate = self
-        AddTaskView.taskTableView.register(TaskTableViewCell.nib, forCellReuseIdentifier: TaskTableViewCell.identifier)
-        AddTaskView.taskTableView.delegate = self
-        AddTaskView.taskTableView.dataSource = self
+        addTaskView.taskTableView.register(TaskTableViewCell.nib, forCellReuseIdentifier: TaskTableViewCell.identifier)
+        addTaskView.taskTableView.delegate = self
+        addTaskView.taskTableView.dataSource = self
+        createCircle()
+        addTaskView.plusButton.backgroundColor = UIColor.systemGreen
     }
     
+    func createCircle() {
+        addTaskView.plusButton.layer.masksToBounds = true
+        addTaskView.plusButton.layer.cornerRadius =
+            addTaskView.plusButton.bounds.width / 2
+    }
 }
 
 extension AddTaskViewController: UITableViewDataSource, UITableViewDelegate {
@@ -28,13 +36,13 @@ extension AddTaskViewController: UITableViewDataSource, UITableViewDelegate {
         return 10
       }
 
-      func tableView(_ tableView: UITableView, cellForRowAt 何個セル出すの: IndexPath) -> UITableViewCell {
-        let 表示するセルの内容 = tableView.dequeueReusableCell(withIdentifier: "再利用セル", for: 何個セル出すの) as! カスタムセルクラス
-        表示するセルの内容.セルに表示するデータの制御 ( 選択数はこれを使う : 何個セル出すの )
-        return 表示するセルの内容
+      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.identifier, for: indexPath) as! TaskTableViewCell
+        return cell
       }
 }
 
+//ボタンタップ時の画面遷移をdelegateで実装した
 extension AddTaskViewController: AddTaskDelegate {
     func addTask() {
         let taskStoryboard: UIStoryboard = UIStoryboard(name: "Task", bundle: nil)

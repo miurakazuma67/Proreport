@@ -13,7 +13,6 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet private weak var priorityLabel: UILabel!
     @IBOutlet private weak var taskLabel: UILabel!
     
-    //commentoutしてみる
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
     

@@ -8,8 +8,8 @@
 import UIKit
 import RealmSwift
 
-final class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate
-{
+final class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate {
+
     let postTableViewCell = PostTableViewCell.self
     let realm = try! Realm()
     var reportArray = try! Realm().objects(ReportData.self).sorted(byKeyPath: "date", ascending: false)
