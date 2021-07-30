@@ -23,7 +23,6 @@
 		A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D9A02575DE3F00B4A987 /* ReportViewController.swift */; };
 		A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECE625666EF100D28158 /* HomeViewController.swift */; };
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
-		A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4455025256F3C0800B41A09 /* SimpleButton.swift */; };
 		A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */; };
 		A48AC86126A9648800668C00 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */; };
 		A48AC86226A9648800668C00 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48AC86026A9648800668C00 /* TaskTableViewCell.xib */; };
@@ -87,7 +86,6 @@
 		A430D9A02575DE3F00B4A987 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		A441ECE625666EF100D28158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		A4455025256F3C0800B41A09 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
 		A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		A48AC86026A9648800668C00 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		A48AC86926A96AEC00668C00 /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				A41F87DF25C96886003D3D54 /* EngineerApp.entitlements */,
 				A41F69C5264CE766003B48C0 /* Models */,
 				A41F69C4264CE739003B48C0 /* ViewControllers */,
-				A4455025256F3C0800B41A09 /* SimpleButton.swift */,
 				A4914C1726A8383600B19FF3 /* Colors.swift */,
 				A45EF8872652351300DAD5BA /* Storyboards */,
 				A45EF8CD26526E2E00DAD5BA /* Xibs */,
@@ -444,7 +441,6 @@
 				A48AC86126A9648800668C00 /* TaskTableViewCell.swift in Sources */,
 				A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */,
 				A4914C1826A8383600B19FF3 /* Colors.swift in Sources */,
-				A4455026256F3C0800B41A09 /* SimpleButton.swift in Sources */,
 				A48AC86A26A96AEC00668C00 /* TaskData.swift in Sources */,
 				A40C8A9625663E390088A1D6 /* AppDelegate.swift in Sources */,
 				A49B1E9C26721F7000D7340F /* MyNavigationController.swift in Sources */,
