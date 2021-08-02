@@ -10,8 +10,8 @@ import UIKit
 final class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.tintColor = UIColor(red: 0.11, green: 0.44, blue: 1, alpha: 1)
-        self.tabBar.barTintColor = UIColor(red: 0.87, green: 0.91, blue: 0.96, alpha: 1)
+        self.tabBar.tintColor = UIColor(hexString: "91C788")
+        self.tabBar.barTintColor = UIColor(hexString: "DDFFBC")
         self.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
