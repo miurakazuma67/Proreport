@@ -18,7 +18,6 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor(hexString: "FEFFDE")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)

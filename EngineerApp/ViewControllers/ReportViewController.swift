@@ -7,7 +7,6 @@
 
 import UIKit
 import RealmSwift
-import IBAnimatable
 
 final class ReportViewController: UIViewController {
     
@@ -23,7 +22,7 @@ final class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(hexString: "FEFFDE")
+        //直せそう
         navigationItem.title = "合計勉強時間"
     }
     

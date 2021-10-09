@@ -11,11 +11,10 @@ import SVProgressHUD
 
 final class PostViewController: UIViewController, UITextViewDelegate {
     
-    @IBOutlet private weak var label: UILabel!
-    @IBOutlet private weak var languageTextField: UITextField!
-    @IBOutlet private weak var timeTextField: UITextField!
-    @IBOutlet private weak var textView: UITextView!
-    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var languageTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
     private var reportData: ReportData!
     private var stopButtonItem: UIBarButtonItem!
@@ -37,20 +36,20 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
         postButtonItem = UIBarButtonItem(title: "記録する", style: .done, target: self, action: #selector(postButtonTapped(_:)))
         
+        
 //        ボタン配置
         self.navigationItem.rightBarButtonItem = postButtonItem
         self.navigationItem.leftBarButtonItem = stopButtonItem
         self.validate()
         
         //color指定
-        view.backgroundColor = UIColor(hexString: "FEFFDE")
-        segmentedControl.selectedSegmentTintColor = UIColor(hexString: "91C788")
-        languageTextField.textColor = UIColor(named:"textColor")
+        //怪しい
+        languageTextField.textColor = Colors.TextColor
         textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 5
-        languageTextField.backgroundColor = UIColor(named: "textFieldColor")
-        textView.backgroundColor = UIColor(named: "textFieldColor")
+        languageTextField.backgroundColor = Colors.TextColor
+        textView.backgroundColor = Colors.TextColor
     }
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
@@ -70,6 +69,7 @@ final class PostViewController: UIViewController, UITextViewDelegate {
             (action: UIAlertAction!) -> Void in
             print("Cancel")
         })
+        
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
         present(alert, animated: true, completion: nil)

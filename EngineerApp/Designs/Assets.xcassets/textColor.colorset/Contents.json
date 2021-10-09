@@ -15,8 +15,8 @@
         }
       ],
       "color" : {
-        "platform" : "osx",
-        "reference" : "systemGrayColor"
+        "platform" : "ios",
+        "reference" : "darkTextColor"
       },
       "idiom" : "universal"
     }

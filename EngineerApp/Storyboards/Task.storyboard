@@ -49,51 +49,26 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Or4-R3-eQX">
                                         <rect key="frame" x="66" y="0.0" width="160" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsW-Bj-zw2">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-XS-S9d" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="27" height="30"/>
-                                                <state key="normal" image="star" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="star1Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="tsq-NQ-oHd"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jx-v7-OY6">
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-PD-6DY" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="0.0" width="27.5" height="30"/>
-                                                <state key="normal" image="star" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="star2Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="KNf-Rl-PD7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-Fe-Kr3">
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edd-u4-JtL" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
                                                 <rect key="frame" x="66.5" y="0.0" width="27" height="30"/>
-                                                <state key="normal" image="star" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="star3Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="JI3-a0-6zz"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-Ti-z8N">
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-Ad-7T6" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
                                                 <rect key="frame" x="99.5" y="0.0" width="27.5" height="30"/>
-                                                <state key="normal" image="star" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="star4Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="g5f-9H-oNk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-Aq-JpF">
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVd-Dc-krh" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
                                                 <rect key="frame" x="133" y="0.0" width="27" height="30"/>
-                                                <state key="normal" image="star" catalog="system">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="star5Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="s39-d2-y3A"/>
-                                                </connections>
-                                            </button>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="X5K-WS-FiS"/>
@@ -117,11 +92,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="starButton1" destination="LsW-Bj-zw2" id="gWT-2R-ZzH"/>
-                        <outlet property="starButton2" destination="9jx-v7-OY6" id="ZET-es-g66"/>
-                        <outlet property="starButton3" destination="cLc-Fe-Kr3" id="LkT-AV-4V6"/>
-                        <outlet property="starButton4" destination="TS6-Ti-z8N" id="LR8-If-cQv"/>
-                        <outlet property="starButton5" destination="BFV-Aq-JpF" id="G9E-ku-EBa"/>
+                        <outlet property="starView1" destination="VdV-XS-S9d" id="0Ek-7t-g9S"/>
+                        <outlet property="starView2" destination="JzN-PD-6DY" id="qIk-La-VyY"/>
+                        <outlet property="starView3" destination="edd-u4-JtL" id="cMq-Oq-mob"/>
+                        <outlet property="starView4" destination="Flr-Ad-7T6" id="lHs-i5-8XN"/>
+                        <outlet property="starView5" destination="SVd-Dc-krh" id="fDv-ju-ST4"/>
                         <outlet property="taskTextField" destination="eMS-Rr-edU" id="65R-4V-B6n"/>
                     </connections>
                 </viewController>
@@ -131,7 +106,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
