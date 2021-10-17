@@ -37,7 +37,7 @@ final class PostTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        dateLabel.textColor = UIColor.gray
+        dateLabel.textColor = Colors.TextGrayColor
     }
     
     // ReportDataの内容をセルに表示

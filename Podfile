@@ -6,10 +6,9 @@ target 'EngineerApp' do
   use_frameworks!
 
   # Pods for EngineerApp
-  pod 'RealmSwift','5.1.0'
+  pod 'RealmSwift'
   pod 'SVProgressHUD','2.2.5'
   pod 'RAMAnimatedTabBarController'
-  pod 'IBAnimatable'
   pod 'DSFloatingButton'
 
 end

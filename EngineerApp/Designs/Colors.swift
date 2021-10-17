@@ -8,6 +8,7 @@
 import UIKit
 
 struct Colors {
+    static var PopGreen = UIColor(named: "PopGreen")      //#DDFFBC
     static var MainGreen = UIColor(named: "MainGreen")!       //#91C788
     static var LightGreen = UIColor(named: "lightGreen")!     //#FEFFDE
     static var TextColor = UIColor(named: "TextColor")! // #4E4F50

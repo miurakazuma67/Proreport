@@ -20,7 +20,7 @@ final class AddTaskViewController: UIViewController {
         addTaskView.taskTableView.delegate = self
         addTaskView.taskTableView.dataSource = self
         createCircle()
-        addTaskView.plusButton.backgroundColor = UIColor.systemGreen
+        addTaskView.plusButton.backgroundColor = Colors.PopGreen
     }
     
     func createCircle() {

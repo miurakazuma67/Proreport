@@ -11,7 +11,7 @@ class MyNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.barTintColor = UIColor(named: "DDFFBC")
+        navigationBar.barTintColor = Colors.PopGreen
     }
 
 }
