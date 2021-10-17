@@ -9,12 +9,16 @@ import UIKit
 import RealmSwift
 import SVProgressHUD
 
-final class PostViewController: UIViewController, UITextViewDelegate {
+final class PostViewController: UIViewController {
     
     
     @IBOutlet weak var languageTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var textViewContainerHeight: NSLayoutConstraint!
+    
+    fileprivate var currentTextViewHeight: CGFloat = 34
     
     private var reportData: ReportData!
     private var stopButtonItem: UIBarButtonItem!
@@ -50,6 +54,7 @@ final class PostViewController: UIViewController, UITextViewDelegate {
         textView.layer.cornerRadius = 5
         languageTextField.backgroundColor = Colors.TextColor
         textView.backgroundColor = Colors.TextColor
+        textView.delegate = self
     }
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
@@ -163,4 +168,47 @@ extension PostViewController {
         self.minute = calender.component(.minute, from: datePicker.date)
         self.view.endEditing(true)
     }
+}
+
+extension PostViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let contentHeight = self.textView.contentSize.height
+        
+        //動的にtextViewのframeを更新できるようにする
+        self.textView.translatesAutoresizingMaskIntoConstraints = true
+        self.textView.sizeToFit()
+        //必要か確認する
+        self.textView.isScrollEnabled = false
+        let resizedHeight = self.textView.frame.size.height
+        self.textViewHeight.constant = resizedHeight
+        //@x: 128.5（左のマージン）
+        //@y: 10（上のマージン）
+        //@width: self.view.frame.width - 175.5(左右のマージン)
+        //@height: sizeToFit()後の高さ
+        self.textView.frame = CGRect(x: 128.5, y: 10, width: self.view.frame.width - 175.5, height: resizedHeight)
+ 
+        if resizedHeight > currentTextViewHeight {
+            let addingHeight = resizedHeight - currentTextViewHeight
+            self.textViewContainerHeight.constant += addingHeight
+            currentTextViewHeight = resizedHeight
+        }
+        
+        if resizedHeight > currentTextViewHeight {
+            let addingHeight = resizedHeight - currentTextViewHeight
+            self.textViewContainerHeight.constant += addingHeight
+            currentTextViewHeight = resizedHeight
+        } else if resizedHeight < currentTextViewHeight {
+            let subtractingHeight = currentTextViewHeight - resizedHeight
+            self.textViewContainerHeight.constant -= subtractingHeight
+            currentTextViewHeight = resizedHeight
+        }
+        
+        if 34.0 <= contentHeight && contentHeight <= 170 {
+            self.textView.isScrollEnabled = false
+        } else {
+            self.textView.isScrollEnabled = true
+        }
+    }
+    
 }
