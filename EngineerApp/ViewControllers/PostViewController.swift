@@ -8,15 +8,15 @@
 import UIKit
 import RealmSwift
 import SVProgressHUD
+import IQKeyboardManagerSwift
 
 final class PostViewController: UIViewController {
     
-    
-    @IBOutlet weak var languageTextField: UITextField!
-    @IBOutlet weak var timeTextField: UITextField!
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var textViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var textViewContainerHeight: NSLayoutConstraint!
+    @IBOutlet private weak var languageTextField: UITextField!
+    @IBOutlet private weak var timeTextField: UITextField!
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var textViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var textViewContainerHeight: NSLayoutConstraint!
     
     fileprivate var currentTextViewHeight: CGFloat = 34
     
@@ -39,7 +39,6 @@ final class PostViewController: UIViewController {
         //MARK: navigationBar
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
         postButtonItem = UIBarButtonItem(title: "記録する", style: .done, target: self, action: #selector(postButtonTapped(_:)))
-        
         
 //        ボタン配置
         self.navigationItem.rightBarButtonItem = postButtonItem

@@ -10,5 +10,6 @@ target 'EngineerApp' do
   pod 'SVProgressHUD','2.2.5'
   pod 'RAMAnimatedTabBarController'
   pod 'DSFloatingButton'
+  pod 'IQKeyboardManagerSwift'
 
 end
