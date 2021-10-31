@@ -51,8 +51,6 @@ final class PostViewController: UIViewController {
         textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 5
-        languageTextField.backgroundColor = Colors.TextColor
-        textView.backgroundColor = Colors.TextColor
         textView.delegate = self
     }
     
@@ -81,6 +79,7 @@ final class PostViewController: UIViewController {
     
     @objc func postButtonTapped(_ sender: UIBarButtonItem) {
         SVProgressHUD.show()
+        //Modelごと渡したい
         let reportData = ReportData()
         reportData.id = 0
         reportData.caption = self.textView.text ?? ""
@@ -147,7 +146,7 @@ extension PostViewController {
         timeTextField.inputView = datePicker
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        let done = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(self.doneClicked))
+        let done = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(self.doneClicked))
         done.tintColor = .systemGreen
         toolbar.setItems([done], animated: true)
         timeTextField.inputAccessoryView = toolbar
