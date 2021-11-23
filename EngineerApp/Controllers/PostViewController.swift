@@ -14,7 +14,7 @@ final class PostViewController: UIViewController {
     
     @IBOutlet private weak var languageTextField: UITextField!
     @IBOutlet private weak var timeTextField: UITextField!
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet weak var textView: PlaceholderNoPaddingTextView!
     @IBOutlet private weak var textViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var textViewContainerHeight: NSLayoutConstraint!
     
@@ -184,7 +184,8 @@ extension PostViewController: UITextViewDelegate {
         //@y: 10（上のマージン）
         //@width: self.view.frame.width - 175.5(左右のマージン)
         //@height: sizeToFit()後の高さ
-        self.textView.frame = CGRect(x: 128.5, y: 10, width: self.view.frame.width - 175.5, height: resizedHeight)
+        //xを直したい
+        self.textView.frame = CGRect(x: (self.view.frame.width - 175.5) / 2, y: 10, width: self.view.frame.width - 175.5, height: resizedHeight)
  
         if resizedHeight > currentTextViewHeight {
             let addingHeight = resizedHeight - currentTextViewHeight

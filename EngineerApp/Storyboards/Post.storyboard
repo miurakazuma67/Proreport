@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rq2-32-wbM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xuh-0f-suJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -56,7 +56,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VzQ-qt-uIu">
-                                                <rect key="frame" x="0.0" y="80" width="414" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z5w-cP-SRY">
                                                         <rect key="frame" x="47" y="23" width="320" height="34"/>
@@ -90,31 +90,31 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1n-fd-wCb">
-                                                <rect key="frame" x="0.0" y="160" width="414" height="54"/>
+                                                <rect key="frame" x="0.0" y="80" width="414" height="54"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13J-RC-NYw">
-                                                        <rect key="frame" x="83.5" y="10" width="35" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8uN-RN-arg">
-                                                        <rect key="frame" x="128.5" y="10" width="238.5" height="34"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="238.5" id="He9-Vq-Fpn"/>
-                                                            <constraint firstAttribute="height" constant="34" id="oM9-iA-Km0"/>
-                                                        </constraints>
-                                                        <color key="textColor" name="TextLightGrayColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mor-Lp-gDR">
+                                                        <rect key="frame" x="88" y="10" width="238.5" height="34"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8uN-RN-arg" customClass="PlaceholderNoPaddingTextView" customModule="EngineerApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="238.5" height="34"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="238.5" id="He9-Vq-Fpn"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="oM9-iA-Km0"/>
+                                                                </constraints>
+                                                                <color key="textColor" name="TextLightGrayColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="メモ"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="13J-RC-NYw" firstAttribute="top" secondItem="J1n-fd-wCb" secondAttribute="top" constant="10" id="CRh-9f-t5n"/>
-                                                    <constraint firstAttribute="bottom" secondItem="8uN-RN-arg" secondAttribute="bottom" constant="10" id="T5L-B1-fHM"/>
-                                                    <constraint firstItem="8uN-RN-arg" firstAttribute="leading" secondItem="13J-RC-NYw" secondAttribute="trailing" constant="10" id="bhe-kj-cDg"/>
-                                                    <constraint firstItem="13J-RC-NYw" firstAttribute="leading" secondItem="J1n-fd-wCb" secondAttribute="leading" constant="83.5" id="lXy-d6-DOU"/>
+                                                    <constraint firstItem="Mor-Lp-gDR" firstAttribute="centerX" secondItem="J1n-fd-wCb" secondAttribute="centerX" id="FPZ-jZ-Ifk"/>
+                                                    <constraint firstItem="Mor-Lp-gDR" firstAttribute="centerY" secondItem="J1n-fd-wCb" secondAttribute="centerY" id="h16-MP-L4n"/>
                                                     <constraint firstAttribute="height" constant="54" id="vAh-uR-znb"/>
                                                 </constraints>
                                             </view>
@@ -147,7 +147,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="languageTextField" destination="61f-x2-M2o" id="u3d-oK-W3B"/>
-                        <outlet property="textView" destination="8uN-RN-arg" id="EIz-iF-MmC"/>
+                        <outlet property="textView" destination="8uN-RN-arg" id="hLg-iT-z0x"/>
                         <outlet property="textViewContainerHeight" destination="vAh-uR-znb" id="Zrq-5w-cjh"/>
                         <outlet property="textViewHeight" destination="oM9-iA-Km0" id="VKc-mC-qrv"/>
                         <outlet property="timeTextField" destination="SEX-jH-uC3" id="4mf-TI-TRz"/>

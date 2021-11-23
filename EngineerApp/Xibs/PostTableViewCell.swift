@@ -10,7 +10,7 @@ import RealmSwift
 import SVProgressHUD
 
 // MARK: delegate protocol
-protocol PostTableViewCellDelegate: class {
+protocol PostTableViewCellDelegate: AnyObject {
     func deleteButtonTapped(index: IndexPath)
 }
 
