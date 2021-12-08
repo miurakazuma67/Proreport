@@ -10,7 +10,7 @@ final class ReportData: Object {
     @objc dynamic var id = 0
     @objc dynamic var caption: String?
     @objc dynamic var date: Date? = Date()
-    @objc dynamic var language: String?
+    @objc dynamic var subject: String?
     @objc dynamic var hour = 0
     @objc dynamic var minute = 0
     

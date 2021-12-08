@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report Study View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ReportStudyViewController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XFR-Rg-da0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="ut0-c5-8NY">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ut0-c5-8NY" id="RCC-1u-Zkz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-Yq-T81">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gHo-Yq-T81" firstAttribute="leading" secondItem="RCC-1u-Zkz" secondAttribute="leading" id="BR1-AE-j2R"/>
+                                                <constraint firstAttribute="trailing" secondItem="gHo-Yq-T81" secondAttribute="trailing" id="cnE-gB-cT7"/>
+                                                <constraint firstItem="gHo-Yq-T81" firstAttribute="top" secondItem="RCC-1u-Zkz" secondAttribute="top" id="hln-kT-Ufz"/>
+                                                <constraint firstAttribute="bottom" secondItem="gHo-Yq-T81" secondAttribute="bottom" id="l4A-m5-0Nr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-eD-z2o">
+                                <rect key="frame" x="10" y="812" width="394" height="40"/>
+                                <color key="backgroundColor" name="MainGreen"/>
+                                <color key="tintColor" name="TextColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="記録する">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reportButtonTapped:" destination="M7e-81-HNY" eventType="touchUpInside" id="dqt-0c-FhD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cr3-eD-z2o" secondAttribute="bottom" constant="10" id="NvY-2a-Ww7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XFR-Rg-da0" secondAttribute="bottom" constant="60" id="Rhm-5A-Sbg"/>
+                            <constraint firstItem="cr3-eD-z2o" firstAttribute="top" secondItem="XFR-Rg-da0" secondAttribute="bottom" constant="10" id="UIX-0Q-dhC"/>
+                            <constraint firstItem="XFR-Rg-da0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YeK-d3-Ijj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XFR-Rg-da0" secondAttribute="trailing" id="iE5-f5-Jeh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cr3-eD-z2o" secondAttribute="trailing" constant="10" id="paL-k7-ncC"/>
+                            <constraint firstItem="XFR-Rg-da0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qAt-rI-QPf"/>
+                            <constraint firstItem="cr3-eD-z2o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="tuv-br-PSv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reportButton" destination="cr3-eD-z2o" id="Nfm-ON-hfc"/>
+                        <outlet property="tableView" destination="XFR-Rg-da0" id="D39-wd-qyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="M7e-81-HNY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainGreen">
+            <color red="0.56862745098039214" green="0.7803921568627451" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.30588235294117649" green="0.30980392156862746" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
