@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
-final class ReportStudyDateTableVieCell: UITableViewCell {
+final class ReportStudyTableVieCell: UITableViewCell {
+    
+    
+    @IBOutlet private weak var textField: UITextField!
+    
+    
     
 }

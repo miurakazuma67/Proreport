@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gar-pe-9j6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gar-pe-9j6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,35 +46,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Or4-R3-eQX">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-y3-gzD" customClass="RatingStarView" customModule="EngineerApp" customModuleProvider="target">
                                         <rect key="frame" x="66" y="0.0" width="160" height="30"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-XS-S9d" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="27" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-PD-6DY" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
-                                                <rect key="frame" x="33" y="0.0" width="27.5" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edd-u4-JtL" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
-                                                <rect key="frame" x="66.5" y="0.0" width="27" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-Ad-7T6" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
-                                                <rect key="frame" x="99.5" y="0.0" width="27.5" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVd-Dc-krh" customClass="StarView" customModule="EngineerApp" customModuleProvider="target">
-                                                <rect key="frame" x="133" y="0.0" width="27" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="X5K-WS-FiS"/>
-                                            <constraint firstAttribute="width" constant="160" id="oOJ-pA-FRt"/>
-                                        </constraints>
-                                    </stackView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="X1v-5s-upB"/>
@@ -92,11 +67,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="starView1" destination="VdV-XS-S9d" id="0Ek-7t-g9S"/>
-                        <outlet property="starView2" destination="JzN-PD-6DY" id="qIk-La-VyY"/>
-                        <outlet property="starView3" destination="edd-u4-JtL" id="cMq-Oq-mob"/>
-                        <outlet property="starView4" destination="Flr-Ad-7T6" id="lHs-i5-8XN"/>
-                        <outlet property="starView5" destination="SVd-Dc-krh" id="fDv-ju-ST4"/>
+                        <outlet property="starView" destination="JmU-y3-gzD" id="kBN-bv-hLA"/>
                         <outlet property="taskTextField" destination="eMS-Rr-edU" id="65R-4V-B6n"/>
                     </connections>
                 </viewController>

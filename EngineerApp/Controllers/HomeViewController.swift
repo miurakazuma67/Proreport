@@ -20,6 +20,8 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //TODO: refactor
         tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)
         navigationItem.title = "学習記録"
     }
@@ -34,6 +36,7 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //xibファイルでcellを追加してるからここは必要
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
         cell.deletedelegate = self
         cell.index = indexPath

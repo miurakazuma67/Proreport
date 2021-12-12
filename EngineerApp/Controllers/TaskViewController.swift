@@ -15,12 +15,8 @@ final class TaskViewController: UIViewController {
     let starFill = UIImage(systemName: "star.fill")?.withRenderingMode(.alwaysTemplate)
     
     @IBOutlet private weak var taskTextField: UITextField!
-
-    @IBOutlet weak var starView1: StarView!
-    @IBOutlet weak var starView2: StarView!
-    @IBOutlet weak var starView3: StarView!
-    @IBOutlet weak var starView4: StarView!
-    @IBOutlet weak var starView5: StarView!
+    
+    @IBOutlet private weak var starView: RatingStarView!
     
     //    private var tapCount: Int = 0
 //    var starNum: Int = 0
