@@ -15,7 +15,6 @@ final class PostViewController: UIViewController {
     @IBOutlet private weak var languageTextField: UITextField!
     @IBOutlet private weak var timeTextField: UITextField!
     @IBOutlet private weak var textView: PlaceholderNoPaddingTextView!
-    @IBOutlet private weak var textViewHeight: NSLayoutConstraint!
     
     private var reportData: ReportData!
     private var stopButtonItem: UIBarButtonItem!
@@ -48,7 +47,6 @@ final class PostViewController: UIViewController {
         textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 5
-        textView.delegate = self
     }
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
@@ -80,7 +78,7 @@ final class PostViewController: UIViewController {
         let reportData = ReportData()
         reportData.id = 0
         reportData.caption = self.textView.text ?? ""
-        reportData.language = self.languageTextField.text ?? ""
+        reportData.subject = self.languageTextField.text ?? ""
         reportData.date = Date()
         reportData.hour = self.hour ?? 0
         reportData.minute = self.minute ?? 0

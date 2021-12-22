@@ -142,9 +142,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="languageTextField" destination="61f-x2-M2o" id="u3d-oK-W3B"/>
-                        <outlet property="textView" destination="VhL-2o-mYJ" id="nfV-ad-1WA"/>
-                        <outlet property="textViewContainerHeight" destination="vAh-uR-znb" id="Zrq-5w-cjh"/>
-                        <outlet property="textViewHeight" destination="VhL-2o-mYJ" id="uwC-KS-edH"/>
+                        <outlet property="textView" destination="VhL-2o-mYJ" id="vcX-Jg-aDc"/>
                         <outlet property="timeTextField" destination="SEX-jH-uC3" id="4mf-TI-TRz"/>
                     </connections>
                 </viewController>

@@ -44,8 +44,8 @@ final class ReportStudyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reportButton.layer.cornerRadius = 5
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
     }
     
     @IBAction func reportButtonTapped(_ sender: UIButton) {
@@ -55,14 +55,14 @@ final class ReportStudyViewController: UIViewController {
     
 }
 
-extension ReportStudyViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellTypes.count
-    }
+//extension ReportStudyViewController: UITableViewDataSource, UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return cellTypes.count
+//    }
     
-    //ここにセル表示
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
+//    //ここにセル表示
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
     
-}
+//}

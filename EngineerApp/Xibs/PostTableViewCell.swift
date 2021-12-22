@@ -43,7 +43,7 @@ final class PostTableViewCell: UITableViewCell {
     // ReportDataの内容をセルに表示
     func setReportData(_ reportData: ReportData) {
         self.captionLabel.text = reportData.caption
-        self.languageLabel.text = reportData.language
+        self.languageLabel.text = reportData.subject
         self.hourLabel.text = String(reportData.hour)
         self.minuteLabel.text = String(reportData.minute)
         

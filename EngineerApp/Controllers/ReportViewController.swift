@@ -22,7 +22,6 @@ final class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //直せそう
         navigationItem.title = "合計勉強時間"
     }
     
