@@ -14,4 +14,6 @@ struct Colors {
     static var TextColor = UIColor(named: "TextColor")! // #4E4F50
     static var TextGrayColor = UIColor(named: "TextGrayColor")! // #9FA1A2
     static var TextLightGrayColor = UIColor(named: "TextLightGrayColor")! // #BABDBF
+    static var StarColor = UIColor(named: "StarColor")! // #F4AA4A
+    static var StarOffColor = UIColor(named: "StarOffColor")! // #E0E0E0
 }

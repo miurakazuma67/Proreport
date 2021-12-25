@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AddTaskViewController: UIViewController {
+final class ConfirmTaskViewController: UIViewController {
     
     @IBOutlet private weak var addTaskView: AddTaskView!
     //Model定義
@@ -31,7 +31,7 @@ final class AddTaskViewController: UIViewController {
     
 }
 
-extension AddTaskViewController: UITableViewDataSource, UITableViewDelegate {
+extension ConfirmTaskViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -45,10 +45,10 @@ extension AddTaskViewController: UITableViewDataSource, UITableViewDelegate {
 
 //ボタンタップ時の画面遷移をdelegateで実装した
 //TODO: 10/9 修正する
-extension AddTaskViewController: AddTaskDelegate {
+extension ConfirmTaskViewController: AddTaskDelegate {
     func addTask() {
-        let taskStoryboard: UIStoryboard = UIStoryboard(name: "Task", bundle: nil)
-        let task = taskStoryboard.instantiateViewController(withIdentifier: "Task") as! TaskViewController
+        let taskStoryboard: UIStoryboard = UIStoryboard(name: "EditTask", bundle: nil)
+        let task = taskStoryboard.instantiateViewController(withIdentifier: "EditTask") as! EditTaskViewController
         let nav = UINavigationController(rootViewController: task)
         self.present(nav, animated: true, completion: nil)
         

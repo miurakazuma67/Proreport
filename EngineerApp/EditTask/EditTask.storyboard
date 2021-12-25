@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gar-pe-9j6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gar-pe-9j6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task View Controller-->
+        <!--Edit Task View Controller-->
         <scene sceneID="akt-dw-C71">
             <objects>
-                <viewController storyboardIdentifier="Task" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gar-pe-9j6" customClass="TaskViewController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditTask" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gar-pe-9j6" customClass="EditTaskViewController" customModule="EngineerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOc-YS-Dhb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,10 +46,39 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmU-y3-gzD" customClass="RatingStarView" customModule="EngineerApp" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LuV-Gr-N6J">
                                         <rect key="frame" x="66" y="0.0" width="160" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-D5-oXI">
+                                                <rect key="frame" x="0.0" y="0.0" width="30.5" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMd-Od-FUQ">
+                                                <rect key="frame" x="32.5" y="0.0" width="30.5" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oby-un-u4C">
+                                                <rect key="frame" x="65" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA6-rw-boN">
+                                                <rect key="frame" x="97" y="0.0" width="30.5" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl2-Zz-lug">
+                                                <rect key="frame" x="129.5" y="0.0" width="30.5" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="fgR-wj-Fd1"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="X1v-5s-upB"/>
@@ -67,7 +96,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="starView" destination="JmU-y3-gzD" id="kBN-bv-hLA"/>
+                        <outlet property="starButton1" destination="HD5-D5-oXI" id="cEe-u7-B5l"/>
+                        <outlet property="starButton2" destination="DMd-Od-FUQ" id="QEb-8n-GbE"/>
+                        <outlet property="starButton3" destination="Oby-un-u4C" id="MWa-Wh-JX0"/>
+                        <outlet property="starButton4" destination="hA6-rw-boN" id="FdH-Yo-5oK"/>
+                        <outlet property="starButton5" destination="gl2-Zz-lug" id="uIr-Zk-Tlw"/>
                         <outlet property="taskTextField" destination="eMS-Rr-edU" id="65R-4V-B6n"/>
                     </connections>
                 </viewController>
