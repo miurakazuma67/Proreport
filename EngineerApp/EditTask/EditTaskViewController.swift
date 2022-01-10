@@ -11,29 +11,23 @@ final class EditTaskViewController: UIViewController {
     
     private var addButtonItem: UIBarButtonItem!
     private var cancelButtonItem: UIBarButtonItem!
-    let star = UIImage(systemName: "star_fill")?.withRenderingMode(.alwaysTemplate)
-    let starFill = UIImage(systemName: "icon_star_one")?.withRenderingMode(.alwaysTemplate)
+    let star = UIImage(systemName: "star_fill")
+    let starFill = UIImage(systemName: "icon_star_one")
     
     @IBOutlet private weak var taskTextField: UITextField!
-    
     @IBOutlet private weak var starButton1: UIButton!
     @IBOutlet private weak var starButton2: UIButton!
     @IBOutlet private weak var starButton3: UIButton!
     @IBOutlet private weak var starButton4: UIButton!
     @IBOutlet private weak var starButton5: UIButton!
     
-    
-        private var tapCount: Int = 0
+    private var tapCount: Int = 0
+    //あとでModelに移す
     var starNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationItem()
-        starButton1.tintColor = .black
-        starButton2.tintColor = .black
-        starButton3.tintColor = .black
-        starButton4.tintColor = .black
-        starButton5.tintColor = .black
     }
     
     private func setNavigationItem() {
@@ -45,13 +39,6 @@ final class EditTaskViewController: UIViewController {
         addButtonItem.tintColor = Colors.MainGreen
         cancelButtonItem.tintColor = Colors.MainGreen
     }
-    
-    //TODO
-    ///星形ボタンの設定
-    
-    
-    
-    
     
     @IBAction func star1Tapped(_ sender: UIButton) {
         tapCount += 1
@@ -99,32 +86,29 @@ final class EditTaskViewController: UIViewController {
     }
 
     //各buttonの色変更メソッド
+    //ここを画像差し替えに変更する！！
     func backgroundChanged1() {
-        starButton1.setImage(starFill, for: .normal)
-        starButton1.tintColor = UIColor.systemYellow
+        starButton1.setBackgroundImage(starFill, for: .normal)
     }
 
     func backgroundChanged2() {
         starButton2.setImage(starFill, for: .normal)
-        starButton2.tintColor = UIColor.systemYellow
     }
 
     func backgroundChanged3() {
         starButton3.setImage(starFill, for: .normal)
-        starButton3.tintColor = UIColor.systemYellow
     }
 
     func backgroundChanged4() {
         starButton4.setImage(starFill, for: .normal)
-        starButton4.tintColor = UIColor.systemYellow
     }
 
     func backgroundChanged5() {
         starButton5.setImage(starFill, for: .normal)
-        starButton5.tintColor = UIColor.systemYellow
     }
 
-    //星ボタンを偶数回押した時に元に戻る
+    ///星ボタンを偶数回押した時に元に戻るメソッド
+    //elseより後ろいる？？
     func resetBackground() {
         if tapCount % 2 == 0 {
             starButton1.setImage(star, for: .normal)
@@ -132,11 +116,6 @@ final class EditTaskViewController: UIViewController {
             starButton3.setImage(star, for: .normal)
             starButton4.setImage(star, for: .normal)
             starButton5.setImage(star, for: .normal)
-            starButton1.tintColor = UIColor.black
-            starButton2.tintColor = UIColor.black
-            starButton3.tintColor = UIColor.black
-            starButton4.tintColor = UIColor.black
-            starButton5.tintColor = UIColor.black
             starNum = 0
         } else { starNum = 0 }
     }
@@ -144,7 +123,7 @@ final class EditTaskViewController: UIViewController {
     // MARK: NavigationItem  methods
     @objc func addButtonPressed(_ sender: UIBarButtonItem) {
         guard let text = self.taskTextField.text else { return }
-        
+        //textを保存するメソッドを書く
     }
     
     @objc func cancelButtonPressed(_ sender: UIBarButtonItem) {

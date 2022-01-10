@@ -38,41 +38,61 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="kAG-GZ-enL">
-                                <rect key="frame" x="94" y="138" width="226" height="30"/>
+                                <rect key="frame" x="87" y="138" width="240" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="優先度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdy-pY-IYH">
-                                        <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LuV-Gr-N6J">
-                                        <rect key="frame" x="66" y="0.0" width="160" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LuV-Gr-N6J">
+                                        <rect key="frame" x="80" y="0.0" width="160" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-D5-oXI">
-                                                <rect key="frame" x="0.0" y="0.0" width="30.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-D5-oXI">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star_fill"/>
+                                                <connections>
+                                                    <action selector="star1Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="Ue3-4O-TA6"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMd-Od-FUQ">
-                                                <rect key="frame" x="32.5" y="0.0" width="30.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMd-Od-FUQ">
+                                                <rect key="frame" x="32" y="0.0" width="32" height="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star_fill"/>
+                                                <connections>
+                                                    <action selector="star2Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="5Xo-S9-nvZ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oby-un-u4C">
-                                                <rect key="frame" x="65" y="0.0" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oby-un-u4C">
+                                                <rect key="frame" x="64" y="0.0" width="32" height="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star_fill"/>
+                                                <connections>
+                                                    <action selector="star3Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="ZrT-zV-kcz"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA6-rw-boN">
-                                                <rect key="frame" x="97" y="0.0" width="30.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA6-rw-boN">
+                                                <rect key="frame" x="96" y="0.0" width="32" height="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star_fill"/>
+                                                <connections>
+                                                    <action selector="star4Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="8xG-4Y-mel"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl2-Zz-lug">
-                                                <rect key="frame" x="129.5" y="0.0" width="30.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl2-Zz-lug">
+                                                <rect key="frame" x="128" y="0.0" width="32" height="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star_fill"/>
+                                                <connections>
+                                                    <action selector="star5Tapped:" destination="gar-pe-9j6" eventType="touchUpInside" id="bSg-6S-eUS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -82,7 +102,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="X1v-5s-upB"/>
-                                    <constraint firstAttribute="width" constant="226" id="sB3-WG-QCx"/>
+                                    <constraint firstAttribute="width" constant="240" id="sB3-WG-QCx"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -110,6 +130,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star_fill" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
