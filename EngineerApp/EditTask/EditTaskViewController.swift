@@ -88,27 +88,26 @@ final class EditTaskViewController: UIViewController {
     //各buttonの色変更メソッド
     //ここを画像差し替えに変更する！！
     func backgroundChanged1() {
-        starButton1.setBackgroundImage(starFill, for: .normal)
+        self.starButton1.setImage(starFill, for: .selected)
     }
 
     func backgroundChanged2() {
-        starButton2.setImage(starFill, for: .normal)
+        self.starButton2.setImage(starFill, for: .selected)
     }
 
     func backgroundChanged3() {
-        starButton3.setImage(starFill, for: .normal)
+        self.starButton3.setImage(starFill, for: .selected)
     }
 
     func backgroundChanged4() {
-        starButton4.setImage(starFill, for: .normal)
+        self.starButton4.setImage(starFill, for: .selected)
     }
 
     func backgroundChanged5() {
-        starButton5.setImage(starFill, for: .normal)
+        self.starButton5.setImage(starFill, for: .selected)
     }
 
     ///星ボタンを偶数回押した時に元に戻るメソッド
-    //elseより後ろいる？？
     func resetBackground() {
         if tapCount % 2 == 0 {
             starButton1.setImage(star, for: .normal)
@@ -117,7 +116,7 @@ final class EditTaskViewController: UIViewController {
             starButton4.setImage(star, for: .normal)
             starButton5.setImage(star, for: .normal)
             starNum = 0
-        } else { starNum = 0 }
+        }
     }
     
     // MARK: NavigationItem  methods

@@ -6,6 +6,7 @@
 //
 import RealmSwift
 
+//記録する画面で使うモデル
 final class ReportData: Object {
     @objc dynamic var id = 0
     @objc dynamic var caption: String?

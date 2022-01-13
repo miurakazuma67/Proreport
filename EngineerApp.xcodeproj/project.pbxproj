@@ -39,6 +39,7 @@
 		A498A7ED26521FC900D1B46F /* Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7EC26521FC900D1B46F /* Report.storyboard */; };
 		A498A7F226521FD300D1B46F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A498A7F126521FD300D1B46F /* Home.storyboard */; };
 		A49B1E9C26721F7000D7340F /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B1E9B26721F7000D7340F /* MyNavigationController.swift */; };
+		A4A0B1B627903DF900BF47A6 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0B1B527903DF900BF47A6 /* StarView.swift */; };
 		A4AADAEF25D660F000860F4A /* アプリアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = A4AADAEE25D660F000860F4A /* アプリアイコン.png */; };
 		A4B3688E271162790000B44C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3688D271162790000B44C /* Colors.swift */; };
 		A4B368902711636A0000B44C /* Colors + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3688F2711636A0000B44C /* Colors + Utility.swift */; };
@@ -111,6 +112,7 @@
 		A498A7EC26521FC900D1B46F /* Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Report.storyboard; sourceTree = "<group>"; };
 		A498A7F126521FD300D1B46F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A49B1E9B26721F7000D7340F /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		A4A0B1B527903DF900BF47A6 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		A4AADAEE25D660F000860F4A /* アプリアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アプリアイコン.png"; sourceTree = "<group>"; };
 		A4B3688D271162790000B44C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A4B3688F2711636A0000B44C /* Colors + Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors + Utility.swift"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				A490F7222748D801003497EB /* NoPaddingTextView.swift */,
+				A4A0B1B527903DF900BF47A6 /* StarView.swift */,
 				A490F7242748D839003497EB /* PlaceholderNoPaddingTextView.swift */,
 			);
 			path = Views;
@@ -537,6 +540,7 @@
 				A4B368902711636A0000B44C /* Colors + Utility.swift in Sources */,
 				A490F7232748D801003497EB /* NoPaddingTextView.swift in Sources */,
 				A490F727274CD3B9003497EB /* UITextView+ Utility.swift in Sources */,
+				A4A0B1B627903DF900BF47A6 /* StarView.swift in Sources */,
 				A422B4A026985DF4002429D8 /* EditTaskViewController.swift in Sources */,
 				A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */,
 				A490F7252748D839003497EB /* PlaceholderNoPaddingTextView.swift in Sources */,
