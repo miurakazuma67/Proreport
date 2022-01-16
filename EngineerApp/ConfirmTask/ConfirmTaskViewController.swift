@@ -21,6 +21,7 @@ final class ConfirmTaskViewController: UIViewController {
         addTaskView.taskTableView.dataSource = self
         createCircle()
         addTaskView.plusButton.backgroundColor = Colors.PopGreen
+        addTaskView.plusButton.tintColor = Colors.TextLightGrayColor
     }
     
     func createCircle() {

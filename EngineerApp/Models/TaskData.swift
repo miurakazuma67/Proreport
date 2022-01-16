@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-//タスクを保存するモデル(EditTaskVC)
+//タスクを保存するモデル(EditTaskVC, addTaskVC)
 final class TaskData: Object {
     @objc dynamic var id = 0
     @objc dynamic var priority: Int = 0

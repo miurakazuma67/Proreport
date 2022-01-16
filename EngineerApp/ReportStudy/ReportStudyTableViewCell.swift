@@ -11,7 +11,6 @@ import UIKit
 
 final class ReportStudyTableVieCell: UITableViewCell {
     
-    
     @IBOutlet private weak var textField: UITextField!
     
     

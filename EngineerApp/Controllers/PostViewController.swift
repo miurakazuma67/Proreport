@@ -10,6 +10,10 @@ import RealmSwift
 import SVProgressHUD
 import IQKeyboardManagerSwift
 
+
+//tableView + セル一個にしたい
+//tabbarを非表示にする(画面を大きくしたい)
+
 final class PostViewController: UIViewController {
     
     @IBOutlet private weak var languageTextField: UITextField!
@@ -30,7 +34,8 @@ final class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //datePicker作成
+        //tabbarを隠す
+        self.tabBarController?.tabBar.isHidden = true
         createDatePicker()
         //MARK: navigationBar
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
@@ -55,16 +60,16 @@ final class PostViewController: UIViewController {
         
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             (action: UIAlertAction!) -> Void in
-            print("OK")
             self.textView.text = ""
             self.languageTextField.text = ""
             self.timeTextField.text = ""
             self.validate()
+            //ここで、HomeVCに画面遷移させる
+            
         })
         
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
             (action: UIAlertAction!) -> Void in
-            print("Cancel")
         })
         
         alert.addAction(cancelAction)
