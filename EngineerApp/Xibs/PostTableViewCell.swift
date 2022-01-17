@@ -18,7 +18,7 @@ final class PostTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var languageLabel: UILabel!
+    @IBOutlet private weak var subjectLabel: UILabel!
     @IBOutlet private weak var hourLabel: UILabel!
     @IBOutlet private weak var minuteLabel: UILabel!
     @IBOutlet private weak var captionLabel: UILabel!
@@ -43,7 +43,7 @@ final class PostTableViewCell: UITableViewCell {
     // ReportDataの内容をセルに表示
     func setReportData(_ reportData: ReportData) {
         self.captionLabel.text = reportData.caption
-        self.languageLabel.text = reportData.subject
+        self.subjectLabel.text = reportData.subject
         self.hourLabel.text = String(reportData.hour)
         self.minuteLabel.text = String(reportData.minute)
         

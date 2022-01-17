@@ -39,6 +39,7 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
         //xibファイルでcellを追加してるからここは必要
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
         cell.deletedelegate = self
+        //TODO: FIX(2022/1/17)
         cell.index = indexPath
         cell.setReportData(reportArray[indexPath.row])
         return cell
