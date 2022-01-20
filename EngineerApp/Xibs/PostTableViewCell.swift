@@ -26,19 +26,11 @@ final class PostTableViewCell: UITableViewCell {
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
     
+    //確認する
+    //配列の番号取得用
     var index: IndexPath!
-    weak var deletedelegate: PostTableViewCellDelegate?
-    
+    weak var deletedelegate: PostTableViewCellDelegate? 
     var count: Int? = nil
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        dateLabel.textColor = Colors.TextGrayColor
-    }
     
     // ReportDataの内容をセルに表示
     func setReportData(_ reportData: ReportData) {

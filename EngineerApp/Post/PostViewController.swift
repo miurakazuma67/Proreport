@@ -11,14 +11,13 @@ import SVProgressHUD
 import IQKeyboardManagerSwift
 
 
-//tableView + セル一個にしたい
 //tabbarを非表示にする(画面を大きくしたい)
 
 final class PostViewController: UIViewController {
     
-    @IBOutlet private weak var languageTextField: UITextField!
+    @IBOutlet private weak var subjectTextField: UITextField!
     @IBOutlet private weak var timeTextField: UITextField!
-    @IBOutlet private weak var textView: PlaceholderNoPaddingTextView!
+    @IBOutlet private weak var textView: UITextView!
     
     private var reportData: ReportData!
     private var stopButtonItem: UIBarButtonItem!
@@ -35,7 +34,9 @@ final class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //tabbarを隠す
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
+        //再表示させたい
+        
         createDatePicker()
         //MARK: navigationBar
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
@@ -48,10 +49,14 @@ final class PostViewController: UIViewController {
         
         //color指定
         //怪しい
-        languageTextField.textColor = Colors.TextColor
-        textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        textView.layer.borderWidth = 1.0
-        textView.layer.cornerRadius = 5
+        subjectTextField.textColor = Colors.TextColor
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .right)
+        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
+        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .top)
+        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .left)
     }
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
@@ -61,7 +66,7 @@ final class PostViewController: UIViewController {
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             (action: UIAlertAction!) -> Void in
             self.textView.text = ""
-            self.languageTextField.text = ""
+            self.subjectTextField.text = ""
             self.timeTextField.text = ""
             self.validate()
             //ここで、HomeVCに画面遷移させる
@@ -83,7 +88,7 @@ final class PostViewController: UIViewController {
         let reportData = ReportData()
         reportData.id = 0
         reportData.caption = self.textView.text ?? ""
-        reportData.subject = self.languageTextField.text ?? ""
+        reportData.subject = self.subjectTextField.text ?? ""
         reportData.date = Date()
         reportData.hour = self.hour ?? 0
         reportData.minute = self.minute ?? 0
@@ -101,7 +106,7 @@ final class PostViewController: UIViewController {
         self.tabBarController?.selectedIndex = 0;
         
         textView.text = ""
-        languageTextField.text = ""
+        subjectTextField.text = ""
         timeTextField.text = ""
         //validate呼び出し
         self.validate()
