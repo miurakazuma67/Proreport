@@ -53,6 +53,8 @@ final class PostViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        self.subjectTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
+        self.timeTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .right)
         self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .top)
