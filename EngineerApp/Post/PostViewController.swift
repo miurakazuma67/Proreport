@@ -55,6 +55,7 @@ final class PostViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         self.subjectTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.timeTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
+        //textViewに枠線をつける
         self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .right)
         self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .top)
@@ -110,7 +111,6 @@ final class PostViewController: UIViewController {
         textView.text = ""
         subjectTextField.text = ""
         timeTextField.text = ""
-        //validate呼び出し
         self.validate()
     }
     
@@ -153,9 +153,11 @@ extension PostViewController {
         timeTextField.inputView = datePicker
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
+        
+        let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let done = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(self.doneClicked))
-        done.tintColor = .systemGreen
-        toolbar.setItems([done], animated: true)
+        done.tintColor = Colors.MainGreen
+        toolbar.setItems([spaceItem, done], animated: true)
         timeTextField.inputAccessoryView = toolbar
     }
     
