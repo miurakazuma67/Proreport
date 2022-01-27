@@ -14,9 +14,7 @@
 		A40C8AB825663E3A0088A1D6 /* EngineerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C8AB725663E3A0088A1D6 /* EngineerAppUITests.swift */; };
 		A40EF1E9257E0DE20024A7C5 /* ReportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EF1E8257E0DE20024A7C5 /* ReportData.swift */; };
 		A41AA30F269D32990007595B /* ConfirmTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AA30E269D32990007595B /* ConfirmTask.storyboard */; };
-		A41AA314269D75860007595B /* AddTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41AA313269D75860007595B /* AddTaskView.xib */; };
 		A41AA319269D75B20007595B /* ConfirmTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41AA318269D75B20007595B /* ConfirmTaskViewController.swift */; };
-		A41AA31E269D8CF60007595B /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41AA31D269D8CF60007595B /* AddTaskView.swift */; };
 		A41DE2922760C5B100E8D18B /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DE2912760C5B100E8D18B /* UITableView+.swift */; };
 		A41DE2942760C5E000E8D18B /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41DE2932760C5E000E8D18B /* NSObject+.swift */; };
 		A422B49B26985D10002429D8 /* EditTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A422B49A26985D10002429D8 /* EditTask.storyboard */; };
@@ -84,9 +82,7 @@
 		A40C8AB925663E3A0088A1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A40EF1E8257E0DE20024A7C5 /* ReportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportData.swift; sourceTree = "<group>"; };
 		A41AA30E269D32990007595B /* ConfirmTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmTask.storyboard; sourceTree = "<group>"; };
-		A41AA313269D75860007595B /* AddTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskView.xib; sourceTree = "<group>"; };
 		A41AA318269D75B20007595B /* ConfirmTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTaskViewController.swift; sourceTree = "<group>"; };
-		A41AA31D269D8CF60007595B /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		A41DE2912760C5B100E8D18B /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		A41DE2932760C5E000E8D18B /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		A41F87DF25C96886003D3D54 /* EngineerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EngineerApp.entitlements; sourceTree = "<group>"; };
@@ -257,8 +253,6 @@
 			children = (
 				A4FC9A872580A886005CAE32 /* PostTableViewCell.xib */,
 				A4FC9A862580A886005CAE32 /* PostTableViewCell.swift */,
-				A41AA313269D75860007595B /* AddTaskView.xib */,
-				A41AA31D269D8CF60007595B /* AddTaskView.swift */,
 				A48AC86026A9648800668C00 /* TaskTableViewCell.xib */,
 				A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */,
 			);
@@ -466,7 +460,6 @@
 				A4CD119D25807F4E00067320 /* Tabbar.storyboard in Resources */,
 				A48AC86226A9648800668C00 /* TaskTableViewCell.xib in Resources */,
 				A41AA30F269D32990007595B /* ConfirmTask.storyboard in Resources */,
-				A41AA314269D75860007595B /* AddTaskView.xib in Resources */,
 				A4B36893271179650000B44C /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,7 +534,6 @@
 				A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */,
 				A490F7252748D839003497EB /* PlaceholderNoPaddingTextView.swift in Sources */,
 				A4B3689527117ADC0000B44C /* Colors+.swift in Sources */,
-				A41AA31E269D8CF60007595B /* AddTaskView.swift in Sources */,
 				A47FA7AD27995810007AC4A4 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
