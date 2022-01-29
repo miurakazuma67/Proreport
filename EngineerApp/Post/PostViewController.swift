@@ -47,9 +47,7 @@ final class PostViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = stopButtonItem
         self.validate()
         
-        //color指定
-        //怪しい
-        subjectTextField.textColor = Colors.TextColor
+        //TODO: textColorを片方消す、あとは表示色を決める
     }
     
     override func viewDidLayoutSubviews() {
@@ -114,6 +112,8 @@ final class PostViewController: UIViewController {
         self.validate()
     }
     
+    
+    //validation: やったこと、勉強時間が入力されてない時に無効にする(やったことは任意でもいいかも)
     private func validate() {
         //postButtonの有効/無効を切り替える
         //        if languageTextField.text == "" {

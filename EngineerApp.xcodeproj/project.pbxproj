@@ -23,6 +23,7 @@
 		A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D9A02575DE3F00B4A987 /* ReportViewController.swift */; };
 		A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECE625666EF100D28158 /* HomeViewController.swift */; };
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
+		A4795C1527A4D4E700BF3D52 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4795C1427A4D4E700BF3D52 /* MyNavigationController.swift */; };
 		A47FA7AD27995810007AC4A4 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FA7AC27995810007AC4A4 /* UIView+.swift */; };
 		A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */; };
 		A48AC86126A9648800668C00 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */; };
@@ -92,6 +93,7 @@
 		A430D9A02575DE3F00B4A987 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		A441ECE625666EF100D28158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		A4795C1427A4D4E700BF3D52 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		A47FA7AC27995810007AC4A4 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		A48AC86026A9648800668C00 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				A4AADAEE25D660F000860F4A /* アプリアイコン.png */,
 				A426AA4125676BDD00A40A53 /* TabBarController.swift */,
+				A4795C1427A4D4E700BF3D52 /* MyNavigationController.swift */,
 				A4B3688D271162790000B44C /* Colors.swift */,
 				A4B36892271179650000B44C /* Colors.xcassets */,
 				A40C8A9E25663E3A0088A1D6 /* Assets.xcassets */,
@@ -531,6 +534,7 @@
 				A490F727274CD3B9003497EB /* UITextView+ Utility.swift in Sources */,
 				A4A0B1B627903DF900BF47A6 /* StarView.swift in Sources */,
 				A422B4A026985DF4002429D8 /* EditTaskViewController.swift in Sources */,
+				A4795C1527A4D4E700BF3D52 /* MyNavigationController.swift in Sources */,
 				A4FC9A882580A886005CAE32 /* PostTableViewCell.swift in Sources */,
 				A490F7252748D839003497EB /* PlaceholderNoPaddingTextView.swift in Sources */,
 				A4B3689527117ADC0000B44C /* Colors+.swift in Sources */,
