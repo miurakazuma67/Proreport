@@ -33,9 +33,6 @@ final class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tabbarを隠す
-//        self.tabBarController?.tabBar.isHidden = true
-        //再表示させたい
         
         createDatePicker()
         //MARK: navigationBar
@@ -47,6 +44,7 @@ final class PostViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = stopButtonItem
         self.validate()
         
+        self.textView.isScrollEnabled = true
         //TODO: textColorを片方消す、あとは表示色を決める
     }
     
@@ -54,10 +52,8 @@ final class PostViewController: UIViewController {
         self.subjectTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.timeTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         //textViewに枠線をつける
-        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .right)
-        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
-        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .top)
-        self.textView.addBorder(width: 0.5, color: Colors.StarColor, position: .left)
+        self.textView.layer.borderWidth = 0.5
+        self.textView.layer.borderColor = Colors.StarColor.cgColor
     }
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
@@ -144,6 +140,7 @@ final class PostViewController: UIViewController {
         //        postButton.alpha = 0.5
         //    }
     }
+    
 }
 
 extension PostViewController {
