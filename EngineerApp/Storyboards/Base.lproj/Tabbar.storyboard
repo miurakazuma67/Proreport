@@ -37,16 +37,6 @@
             </objects>
             <point key="canvasLocation" x="1259" y="513"/>
         </scene>
-        <!--ConfirmTask-->
-        <scene sceneID="AoU-Bc-ROp">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ConfirmTask" id="EB5-8P-kgK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7Dv-Ld-gCO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HV4-OP-07Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1473" y="513"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hNZ-8Z-PJl">
             <objects>
@@ -61,7 +51,6 @@
                         <segue destination="WqW-z6-uYZ" kind="relationship" relationship="viewControllers" id="5Aj-Sv-vMb"/>
                         <segue destination="Dqi-4O-aXV" kind="relationship" relationship="viewControllers" id="lFj-rv-QeB"/>
                         <segue destination="iP0-Gx-j11" kind="relationship" relationship="viewControllers" id="grj-kX-JsP"/>
-                        <segue destination="EB5-8P-kgK" kind="relationship" relationship="viewControllers" id="CaY-i0-9VY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NE9-ON-a4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

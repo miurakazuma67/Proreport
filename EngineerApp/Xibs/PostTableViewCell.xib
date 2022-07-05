@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="314" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvO-rA-etZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvO-rA-etZ">
                         <rect key="frame" x="10" y="10" width="150" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="FiT-hq-I0H"/>
@@ -28,19 +28,21 @@
                         <color key="textColor" name="TextGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wb-yf-xqb">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wb-yf-xqb">
                         <rect key="frame" x="274" y="10" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="hk4-vq-X4n"/>
                             <constraint firstAttribute="width" constant="30" id="qV6-iu-U8j"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                        <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system" title="">
+                            <color key="baseForegroundColor" name="StarColor"/>
+                        </buttonConfiguration>
                         <connections>
                             <action selector="handle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZvC-kv-vQC"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFd-X6-2fW">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFd-X6-2fW">
                         <rect key="frame" x="10" y="50" width="240" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="240" id="oor-T8-TZA"/>
@@ -82,7 +84,7 @@
                             <constraint firstAttribute="height" constant="20" id="5eD-tI-gTs"/>
                         </constraints>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L21-5h-oJg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L21-5h-oJg">
                         <rect key="frame" x="10" y="110" width="294" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -118,6 +120,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <namedColor name="LightGreen">
             <color red="0.99607843137254903" green="1" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

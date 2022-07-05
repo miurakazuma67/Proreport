@@ -10,7 +10,6 @@ import RealmSwift
 import SVProgressHUD
 import IQKeyboardManagerSwift
 
-
 //tabbarを非表示にする(画面を大きくしたい)
 
 final class PostViewController: UIViewController {
@@ -39,35 +38,34 @@ final class PostViewController: UIViewController {
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
         postButtonItem = UIBarButtonItem(title: "記録する", style: .done, target: self, action: #selector(postButtonTapped(_:)))
         
-//        ボタン配置
+ // ボタン配置
         self.navigationItem.rightBarButtonItem = postButtonItem
         self.navigationItem.leftBarButtonItem = stopButtonItem
         self.validate()
         
         self.textView.isScrollEnabled = true
-        //TODO: textColorを片方消す、あとは表示色を決める
+ //TODO: textColorを片方消す、あとは表示色を決める
     }
     
     override func viewDidLayoutSubviews() {
         self.subjectTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.timeTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
-        //textViewに枠線をつける
+ // textViewに枠線をつける
         self.textView.layer.borderWidth = 0.5
         self.textView.layer.borderColor = Colors.StarColor.cgColor
     }
     
     @objc func stopButtonTapped(_ sender: UIBarButtonItem) {
-        
+
         let alert: UIAlertController = UIAlertController(title: "記録をキャンセルしますか？", message: "", preferredStyle:  UIAlertController.Style.alert)
-        
+
         let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.destructive, handler:{
             (action: UIAlertAction!) -> Void in
             self.textView.text = ""
             self.subjectTextField.text = ""
             self.timeTextField.text = ""
             self.validate()
-            //ここで、HomeVCに画面遷移させる
-            
+ // ここで、HomeVCに画面遷移させる
         })
         
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
@@ -81,7 +79,7 @@ final class PostViewController: UIViewController {
     
     @objc func postButtonTapped(_ sender: UIBarButtonItem) {
         SVProgressHUD.show()
-        //Modelごと渡したい
+ // Modelごと渡したい
         let reportData = ReportData()
         reportData.id = 0
         reportData.caption = self.textView.text ?? ""
@@ -99,7 +97,7 @@ final class PostViewController: UIViewController {
             realm.add(reportData)
         }
         SVProgressHUD.showSuccess(withStatus: "記録が完了しました!")
-        // 投稿処理が完了したので、HomeViewControllerに遷移させる
+ // 投稿処理が完了したので、HomeViewControllerに遷移させる
         self.tabBarController?.selectedIndex = 0;
         
         textView.text = ""
@@ -108,8 +106,7 @@ final class PostViewController: UIViewController {
         self.validate()
     }
     
-    
-    //validation: やったこと、勉強時間が入力されてない時に無効にする(やったことは任意でもいいかも)
+ // validation: やったこと、勉強時間が入力されてない時に無効にする(やったことは任意でもいいかも)
     private func validate() {
         //postButtonの有効/無効を切り替える
         //        if languageTextField.text == "" {
@@ -160,13 +157,10 @@ extension PostViewController {
     
     @objc func doneClicked() {
         let dateFormatter = DateFormatter()
-        
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .short
         dateFormatter.locale    = NSLocale(localeIdentifier: "ja_JP") as Locale?
-
         dateFormatter.dateFormat = "H時間mm分"
-        
         timeTextField.text = dateFormatter.string(from: datePicker.date)
         self.hour = calender.component(.hour, from: datePicker.date)
         self.minute = calender.component(.minute, from: datePicker.date)

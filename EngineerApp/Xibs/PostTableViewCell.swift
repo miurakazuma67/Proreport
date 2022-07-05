@@ -15,21 +15,20 @@ protocol PostTableViewCellDelegate: AnyObject {
 }
 
 final class PostTableViewCell: UITableViewCell {
-    
+
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var subjectLabel: UILabel!
     @IBOutlet private weak var hourLabel: UILabel!
     @IBOutlet private weak var minuteLabel: UILabel!
     @IBOutlet private weak var captionLabel: UILabel!
-    
+
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
-    
-    //確認する
+
     //配列の番号取得用
     var index: IndexPath!
-    weak var deletedelegate: PostTableViewCellDelegate? 
+    weak var deleteDelegate: PostTableViewCellDelegate? 
     var count: Int? = nil
     
     // ReportDataの内容をセルに表示
@@ -50,6 +49,6 @@ final class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func handle(_ sender: Any) {
-        deletedelegate?.deleteButtonTapped(index: index)
+        deleteDelegate?.deleteButtonTapped(index: index)
     }
 }
