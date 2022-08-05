@@ -8,9 +8,7 @@
 import UIKit
 import RealmSwift
 import SVProgressHUD
-import IQKeyboardManagerSwift
 
-//tabbarを非表示にする(画面を大きくしたい)
 
 final class PostViewController: UIViewController {
     
