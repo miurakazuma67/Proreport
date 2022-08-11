@@ -25,7 +25,7 @@ final class PostViewController: UIViewController {
     var minute: Int?
     
     @IBAction func languageEditChanged(_ sender: UITextField) {
-        self.validate()
+//        self.validate()
     }
     
     override func viewDidLoad() {
@@ -35,20 +35,15 @@ final class PostViewController: UIViewController {
         //MARK: navigationBar
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
         postButtonItem = UIBarButtonItem(title: "記録する", style: .done, target: self, action: #selector(postButtonTapped(_:)))
-        
- // ボタン配置
+
         self.navigationItem.rightBarButtonItem = postButtonItem
         self.navigationItem.leftBarButtonItem = stopButtonItem
-        self.validate()
-        
         self.textView.isScrollEnabled = true
- //TODO: textColorを片方消す、あとは表示色を決める
     }
     
     override func viewDidLayoutSubviews() {
         self.subjectTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
         self.timeTextField.addBorder(width: 0.5, color: Colors.StarColor, position: .bottom)
- // textViewに枠線をつける
         self.textView.layer.borderWidth = 0.5
         self.textView.layer.borderColor = Colors.StarColor.cgColor
     }
@@ -62,8 +57,6 @@ final class PostViewController: UIViewController {
             self.textView.text = ""
             self.subjectTextField.text = ""
             self.timeTextField.text = ""
-            self.validate()
- // ここで、HomeVCに画面遷移させる
         })
         
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
@@ -101,41 +94,7 @@ final class PostViewController: UIViewController {
         textView.text = ""
         subjectTextField.text = ""
         timeTextField.text = ""
-        self.validate()
     }
-    
- // validation: やったこと、勉強時間が入力されてない時に無効にする(やったことは任意でもいいかも)
-    private func validate() {
-        //postButtonの有効/無効を切り替える
-        //        if languageTextField.text == "" {
-        //            buttonCannotUse()
-        //        } else {
-        //            buttonCanUse()
-        //        }
-        //
-        //        if hourTextField.text == "" {
-        //            buttonCannotUse()
-        //        } else {
-        //            buttonCanUse()
-        //        }
-        //
-        //        if minuteTextField.text == "" {
-        //            buttonCannotUse()
-        //        } else {
-        //            buttonCanUse()
-        //        }
-        //    }
-        //
-        //    func buttonCanUse() {
-        //        postButton.isEnabled  = true //ボタン有効
-        //        postButton.alpha = 1.0
-        //    }
-        //    func buttonCannotUse() {
-        //        postButton.isEnabled  = false //ボタン無効
-        //        postButton.alpha = 0.5
-        //    }
-    }
-    
 }
 
 extension PostViewController {
@@ -145,7 +104,7 @@ extension PostViewController {
         timeTextField.inputView = datePicker
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        
+
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let done = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(self.doneClicked))
         done.tintColor = Colors.MainGreen
