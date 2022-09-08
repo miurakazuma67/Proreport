@@ -25,7 +25,6 @@ final class PostViewController: UIViewController {
     var minute: Int?
     
     @IBAction func languageEditChanged(_ sender: UITextField) {
-//        self.validate()
     }
     
     override func viewDidLoad() {
