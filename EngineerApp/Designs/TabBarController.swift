@@ -55,7 +55,7 @@ final class TabBarAnimatedTransitioning: NSObject, UIViewControllerAnimatedTrans
     }
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.3
+        return 0.8
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -72,9 +72,9 @@ final class TabBarAnimatedTransitioning: NSObject, UIViewControllerAnimatedTrans
         toView.center.x += offset
 
         // animateメソッドを使うことでアニメーションをおこなってる
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.curveEaseOut], animations: {
 
-            fromView.alpha = 0
+            fromView.alpha = 1
             fromView.center.x = fromView.center.x - offset
             toView.alpha = 1
             toView.center.x = toView.center.x - offset
