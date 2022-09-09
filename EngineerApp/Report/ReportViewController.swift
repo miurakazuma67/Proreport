@@ -13,11 +13,13 @@ final class ReportViewController: UIViewController {
     @IBOutlet private weak var totalHourLabel: UILabel!
     @IBOutlet private weak var totalMinuteLabel: UILabel!
     
-    var results: [ReportData] = []
+    private var results: [ReportData] = []
+    private var hour: Int = 0
+    private var minute: Int = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        totalCalculate()
+        Calculatetotal()
     }
     
     override func viewDidLoad() {
@@ -25,10 +27,7 @@ final class ReportViewController: UIViewController {
         navigationItem.title = "合計勉強時間"
     }
     
-    func totalCalculate() {
-        var hour: Int = 0
-        var minute: Int = 0
-        
+    func Calculatetotal() {
         //resultsにreportDataの配列を代入
         let realm = try! Realm()
         let results = realm.objects(ReportData.self)
@@ -51,3 +50,7 @@ final class ReportViewController: UIViewController {
     }
 }
 
+ // Charts周り
+extension ReportViewController {
+
+}

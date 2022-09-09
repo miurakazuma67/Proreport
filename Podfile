@@ -7,9 +7,10 @@ target 'EngineerApp' do
 
   # Pods for EngineerApp
   pod 'RealmSwift'
-  pod 'SVProgressHUD','2.2.5'
+  pod 'SVProgressHUD'
   pod 'RAMAnimatedTabBarController'
   pod 'DSFloatingButton'
   pod 'IQKeyboardManagerSwift'
+  pod 'Charts'
 
 end

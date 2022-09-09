@@ -1,4 +1,8 @@
 PODS:
+  - Charts (4.0.2):
+    - Charts/Core (= 4.0.2)
+  - Charts/Core (4.0.2):
+    - SwiftAlgorithms (~> 1.0)
   - DSFloatingButton (1.0.1)
   - IQKeyboardManagerSwift (6.5.6)
   - RAMAnimatedTabBarController (5.2.0)
@@ -8,31 +12,37 @@ PODS:
   - RealmSwift (10.17.0):
     - Realm (= 10.17.0)
   - SVProgressHUD (2.2.5)
+  - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
+  - Charts
   - DSFloatingButton
   - IQKeyboardManagerSwift
   - RAMAnimatedTabBarController
   - RealmSwift
-  - SVProgressHUD (= 2.2.5)
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
+    - Charts
     - DSFloatingButton
     - IQKeyboardManagerSwift
     - RAMAnimatedTabBarController
     - Realm
     - RealmSwift
     - SVProgressHUD
+    - SwiftAlgorithms
 
 SPEC CHECKSUMS:
+  Charts: cfa4e911e6dc289582c2fe011a0e87c03d96727f
   DSFloatingButton: 2611b44e75736cd2f2686691ee4d2c16f2b62391
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   Realm: 9533276bd76f66aa2fd0d3ffe700c1f6023dcab6
   RealmSwift: 57f5d59aa29852587aad1e861989e7af139894b5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: a92d2ebc2083248ddb1a75cc4026cbcd03850a8f
+PODFILE CHECKSUM: dabfad06ac1432a7d924e67b45071fa3817157a8
 
 COCOAPODS: 1.11.2
