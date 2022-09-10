@@ -14,6 +14,7 @@ final class ReportViewController: UIViewController {
     @IBOutlet private weak var totalMinuteLabel: UILabel!
     
     private var results: [ReportData] = []
+    // 合計時間計算用のプロパティ
     private var hour: Int = 0
     private var minute: Int = 0
     
@@ -33,10 +34,17 @@ final class ReportViewController: UIViewController {
         let results = realm.objects(ReportData.self)
         
         for content in results {
+            // ReportData型のcontent(単体であり、配列の1このデータ)から、時間を取り出して全部足し合わせている
             let totalHour = content.hour
             hour += totalHour
-            let totalMinute = Int(content.minute)
+            let totalMinute = content.minute
             minute += totalMinute
+
+            // 今日の日付を取得し、
+            // 今日の日付と一致するもののみで合計時間を計算する
+            // これを最新1週間でやる
+            // それ以降を対応する場合は、矢印ボタンタップ時にdate操作を-7して合計計算とか？
+
         }
         
         //minuteが60を超えてしまった場合に、超えた分をhourに加えて、残りをminuteとする
@@ -44,7 +52,6 @@ final class ReportViewController: UIViewController {
             hour += minute / 60
             minute = minute % 60
         }
-        
         self.totalHourLabel.text = "\(hour)"
         self.totalMinuteLabel.text = "\(minute)"
     }
