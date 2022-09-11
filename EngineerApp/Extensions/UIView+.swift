@@ -38,8 +38,6 @@ extension UIView {
             border.backgroundColor = color.cgColor
             self.layer.addSublayer(border)
         case .right:
-            print(self.frame.width)
-
             border.frame = CGRect(x: self.frame.width - width, y: 0, width: width, height: self.frame.height)
             border.backgroundColor = color.cgColor
             self.layer.addSublayer(border)

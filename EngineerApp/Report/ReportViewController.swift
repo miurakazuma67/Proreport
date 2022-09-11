@@ -21,6 +21,7 @@ final class ReportViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Calculatetotal()
+        showChart()
     }
     
     override func viewDidLoad() {
@@ -39,14 +40,8 @@ final class ReportViewController: UIViewController {
             hour += totalHour
             let totalMinute = content.minute
             minute += totalMinute
-
-            // 今日の日付を取得し、
-            // 今日の日付と一致するもののみで合計時間を計算する
-            // これを最新1週間でやる
-            // それ以降を対応する場合は、矢印ボタンタップ時にdate操作を-7して合計計算とか？
-
         }
-        
+
         //minuteが60を超えてしまった場合に、超えた分をhourに加えて、残りをminuteとする
         if minute >= 59 {
             hour += minute / 60
@@ -54,6 +49,27 @@ final class ReportViewController: UIViewController {
         }
         self.totalHourLabel.text = "\(hour)"
         self.totalMinuteLabel.text = "\(minute)"
+    }
+
+    private func showChart() {
+        let realm = try! Realm()
+        let results = realm.objects(ReportData.self)
+
+        //最新の日付を取得
+        let calendar = Calendar(identifier: .gregorian)
+        // dateのままだと、何月何日何時何分何秒まで取得されるので、投稿されたものと一致しなくなる -> 合計しても0になる
+        // 何月何日で絞る必要がある -> 月日の取得
+        let date = Date()
+        print("\(date)🐶")
+
+        // この日付と一致するものだけをresults配列から取り出し、合計時間を計算する
+        let todays = results.filter {
+            $0.date == date
+        }
+        // この時点だとReportData型の配列なので、時間取り出す
+        let totalHourToday = todays.map{ $0.hour }
+        let totalHour = totalHourToday.reduce(0, +)
+//        print(totalHour)
     }
 }
 
