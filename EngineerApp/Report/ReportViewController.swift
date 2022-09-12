@@ -58,9 +58,12 @@ final class ReportViewController: UIViewController {
         //最新の日付を取得
         let calendar = Calendar(identifier: .gregorian)
         // dateのままだと、何月何日何時何分何秒まで取得されるので、投稿されたものと一致しなくなる -> 合計しても0になる
-        // 何月何日で絞る必要がある -> 月日の取得
+        // 何月何日で絞る必要がある -> 月日の取得がしたい
         let date = Date()
-        print("\(date)🐶")
+        // 今日の年月日を取得する
+        var dataCompornents = calendar
+            .dateComponents([.year, .month, .day], from: date)
+        
 
         // この日付と一致するものだけをresults配列から取り出し、合計時間を計算する
         let todays = results.filter {
