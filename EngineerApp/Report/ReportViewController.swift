@@ -72,7 +72,6 @@ final class ReportViewController: UIViewController {
         // この時点だとReportData型の配列なので、時間取り出す
         let totalHourToday = todays.map{ $0.hour }
         let totalHour = totalHourToday.reduce(0, +)
-//        print(totalHour)
     }
 }
 

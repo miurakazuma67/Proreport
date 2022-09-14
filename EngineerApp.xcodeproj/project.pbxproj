@@ -23,6 +23,8 @@
 		A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D9A02575DE3F00B4A987 /* ReportViewController.swift */; };
 		A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECE625666EF100D28158 /* HomeViewController.swift */; };
 		A441ECEC25666F7400D28158 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A441ECEB25666F7400D28158 /* PostViewController.swift */; };
+		A4758D4728D1D84700028217 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4758D4628D1D84700028217 /* TimerViewController.swift */; };
+		A4758D4928D1D85600028217 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4758D4828D1D85600028217 /* Timer.storyboard */; };
 		A4795C1527A4D4E700BF3D52 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4795C1427A4D4E700BF3D52 /* MyNavigationController.swift */; };
 		A47FA7AD27995810007AC4A4 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FA7AC27995810007AC4A4 /* UIView+.swift */; };
 		A481492C25B6C09400360E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C8AA025663E3A0088A1D6 /* LaunchScreen.storyboard */; };
@@ -93,6 +95,8 @@
 		A430D9A02575DE3F00B4A987 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		A441ECE625666EF100D28158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A441ECEB25666F7400D28158 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		A4758D4628D1D84700028217 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		A4758D4828D1D85600028217 /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		A4795C1427A4D4E700BF3D52 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		A47FA7AC27995810007AC4A4 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A48AC85F26A9648800668C00 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 			children = (
 				A430D9A02575DE3F00B4A987 /* ReportViewController.swift */,
 				A498A7EC26521FC900D1B46F /* Report.storyboard */,
+				A4758D4628D1D84700028217 /* TimerViewController.swift */,
+				A4758D4828D1D85600028217 /* Timer.storyboard */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				A4CD119D25807F4E00067320 /* Tabbar.storyboard in Resources */,
 				A48AC86226A9648800668C00 /* TaskTableViewCell.xib in Resources */,
 				A41AA30F269D32990007595B /* ConfirmTask.storyboard in Resources */,
+				A4758D4928D1D85600028217 /* Timer.storyboard in Resources */,
 				A4B36893271179650000B44C /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +527,7 @@
 				A41AA319269D75B20007595B /* ConfirmTaskViewController.swift in Sources */,
 				A48AC86126A9648800668C00 /* TaskTableViewCell.swift in Sources */,
 				A441ECE725666EF100D28158 /* HomeViewController.swift in Sources */,
+				A4758D4728D1D84700028217 /* TimerViewController.swift in Sources */,
 				A48AC86A26A96AEC00668C00 /* TaskData.swift in Sources */,
 				A40C8A9625663E390088A1D6 /* AppDelegate.swift in Sources */,
 				A430D9A12575DE3F00B4A987 /* ReportViewController.swift in Sources */,
