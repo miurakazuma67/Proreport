@@ -35,8 +35,7 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
-        cell.deleteDelegate = self
-        //TODO: FIX(2022/1/17)
+        cell.delegate = self
         cell.index = indexPath
         cell.setReportData(reportArray[indexPath.row])
         return cell

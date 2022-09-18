@@ -28,7 +28,7 @@ final class PostTableViewCell: UITableViewCell {
 
     //配列の番号取得用
     var index: IndexPath!
-    weak var deleteDelegate: PostTableViewCellDelegate? 
+    weak var delegate: PostTableViewCellDelegate? 
     var count: Int? = nil
     
     // ReportDataの内容をセルに表示
@@ -49,6 +49,6 @@ final class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func handle(_ sender: Any) {
-        deleteDelegate?.deleteButtonTapped(index: index)
+        delegate?.deleteButtonTapped(index: index)
     }
 }
