@@ -11,11 +11,11 @@ import SVProgressHUD
 
 
 final class PostViewController: UIViewController {
-    
+
     @IBOutlet private weak var subjectTextField: UITextField!
     @IBOutlet private weak var timeTextField: UITextField!
     @IBOutlet private weak var textView: UITextView!
-    
+
     private var reportData: ReportData!
     private var stopButtonItem: UIBarButtonItem!
     private var postButtonItem: UIBarButtonItem!
@@ -24,9 +24,6 @@ final class PostViewController: UIViewController {
     var hour: Int?
     var minute: Int?
 
-    @IBAction func languageEditChanged(_ sender: UITextField) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
