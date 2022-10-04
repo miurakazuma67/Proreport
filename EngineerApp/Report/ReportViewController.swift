@@ -55,23 +55,23 @@ final class ReportViewController: UIViewController {
         let realm = try! Realm()
         let results = realm.objects(ReportData.self)
 
-        //最新の日付を取得
-        let calendar = Calendar(identifier: .gregorian)
-        // dateのままだと、何月何日何時何分何秒まで取得されるので、投稿されたものと一致しなくなる -> 合計しても0になる
-        // 何月何日で絞る必要がある -> 月日の取得がしたい
-        let date = Date()
-        // 今日の年月日を取得する
-        var dataCompornents = calendar
-            .dateComponents([.year, .month, .day], from: date)
-        
-
-        // この日付と一致するものだけをresults配列から取り出し、合計時間を計算する
-        let todays = results.filter {
-            $0.date == date
-        }
-        // この時点だとReportData型の配列なので、時間取り出す
-        let totalHourToday = todays.map{ $0.hour }
-        let totalHour = totalHourToday.reduce(0, +)
+//        //最新の日付を取得
+//        let calendar = Calendar(identifier: .gregorian)
+//        // dateのままだと、何月何日何時何分何秒まで取得されるので、投稿されたものと一致しなくなる -> 合計しても0になる
+//        // 何月何日で絞る必要がある -> 月日の取得がしたい
+//        let date = Date()
+//        // 今日の年月日を取得する
+//        var dataCompornents = calendar
+//            .dateComponents([.year, .month, .day], from: date)
+//        
+//
+//        // この日付と一致するものだけをresults配列から取り出し、合計時間を計算する
+//        let todays = results.filter {
+//            $0.date == date
+//        }
+//        // この時点だとReportData型の配列なので、時間取り出す
+//        let totalHourToday = todays.map{ $0.hour }
+//        let totalHour = totalHourToday.reduce(0, +)
     }
 }
 

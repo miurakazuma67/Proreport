@@ -26,7 +26,7 @@ final class PostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         createDatePicker()
         //MARK: navigationBar
         stopButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(stopButtonTapped(_:)))
@@ -54,16 +54,16 @@ final class PostViewController: UIViewController {
             self.subjectTextField.text = ""
             self.timeTextField.text = ""
         })
-        
+
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
             (action: UIAlertAction!) -> Void in
         })
-        
+
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
         present(alert, animated: true, completion: nil)
     }
-    
+
     @objc func postButtonTapped(_ sender: UIBarButtonItem) {
         SVProgressHUD.show()
  // Modelごと渡したい
@@ -74,7 +74,7 @@ final class PostViewController: UIViewController {
         reportData.date = Date()
         reportData.hour = self.hour ?? 0
         reportData.minute = self.minute ?? 0
-        
+
         let realm = try! Realm()
         try! realm.write {
             let allReportDatas = realm.objects(ReportData.self)
@@ -107,7 +107,7 @@ extension PostViewController {
         toolbar.setItems([spaceItem, done], animated: true)
         timeTextField.inputAccessoryView = toolbar
     }
-    
+
     @objc func doneClicked() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .none

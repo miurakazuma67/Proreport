@@ -43,6 +43,7 @@ final class HomeViewController: UIViewController, UITableViewDataSource, UITable
 }
 
 extension HomeViewController {
+    // 編集を追加したい
     func deleteButtonTapped(index: IndexPath){
         let alert: UIAlertController = UIAlertController(title: "注意", message: "削除してもいいですか？", preferredStyle: .actionSheet)
 
